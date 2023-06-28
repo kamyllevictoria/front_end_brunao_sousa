@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+body{
+    margin:0;
+}
+.box{
+    background-color:lightpink;
+    height: 100px;
+}
+
+.box div{
+    background-color: lightpink;
+    height: 80px;
+    margin-top: 10px;
+}
+.box .div1{
+    background-color: lightcoral;
+}
+
+.box .div2{
+    background-color: lightgoldenrodyellow;
+}
+
+.box .div3{
+    background-color: lightsalmon;
+}

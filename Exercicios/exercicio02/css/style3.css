@@ -38,8 +38,6 @@ main{
     box-sizing: border-box;
 }
 
-
-
 /*Essa parte serve para posicionarmos a imagem mais para cima, com 40px da margem e 15 pixels do padding!*/
 .card .card-image-big{
     margin-top:-55px;
@@ -74,7 +72,7 @@ main{
     width: 100%;
 }
 
-/*Para criarmos um css expeficico, usamos essa linha de acessibilidade:*/
+/*Para criarmos um css espeficico, usamos essa linha de acessibilidade:*/
 
 .card .card-footer .btn{
     width: 100%;
