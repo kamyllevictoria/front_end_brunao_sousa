@@ -14,6 +14,8 @@ main{
 .card-container{
     width: 400px;
     display: table;
+    float: left;
+    margin: 60px 60px 0 0;
 }
 
 .card {
@@ -36,6 +38,13 @@ main{
     box-sizing: border-box;
 }
 
+
+
+/*Essa parte serve para posicionarmos a imagem mais para cima, com 40px da margem e 15 pixels do padding!*/
+.card .card-image-big{
+    margin-top:-55px;
+}
+
 .card .card-body{
     width: 100%;
     display: table;
@@ -47,6 +56,17 @@ main{
     line-height: 24px;
     color: rgb(47, 157, 198);
     margin: 0;
+}
+
+.card .card-body p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: justify;
+    font-weight: bold;
+    margin-bottom: 0;
+    display: block;
+
 }
 
 .card .card-footer{
