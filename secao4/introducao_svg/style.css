@@ -1,0 +1,43 @@
+
+@keyframes dashAnim {
+    0%{
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
+    100%{
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        fill: orangered
+    }
+}
+
+div#svg{
+    margin: 0 auto;
+}
+
+div{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+/*tratamos o svg como img*/
+
+.st0{
+    
+    stroke:#ff9966;
+    stroke-width:4;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 200;
+    animation: dashAnim 5s linear infinite;
+}
+
+/*stroke dasharray- deixa a svg pontilhada*/
+
+/*stroke dashoffste- descolamento dos pontilhados do dasharray. se aumentamos muito, alguns pontilhados podem sumir, pois os deslocamentos dos pontos, podem afetar a estrutura*/
+
+/*podemos importar o svg com a tag img ou usar a tag object. Na tag object, pegamos os dados da image svg, importamos seu style (porem sem sua tag style) e fazemos modificações no css; no html, informados os dados basicos de data e type (ambos contidos no object e, assim, conseguimos manipular a imagem svg.*/
+
+/*quando afetamos o arquivo via html, usamos o link css pelo proprio html, podemos colocar nossa imagem svg no html, pore, fica MUITO grande e poluido o codigo.*/
