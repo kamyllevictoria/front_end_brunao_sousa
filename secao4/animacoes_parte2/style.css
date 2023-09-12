@@ -5,17 +5,39 @@ muitas vezes, o navegador nao aceita animacoes em css (pois o mesmo é muito ant
 -ms-transform= internet explorer
 -tranform = usado ultimamente
 */
+
 @keyframes btn{
     0%{
-
+        width: 200px;
+        height: 64px;
+        display: block;
+        border-radius: 4px;
+        border: 2px solid rgb(219, 45, 103);
+        background-color: white;
+        box-shadow: 8px 8px 0 palevioletred;
+        color: white;
     }
 
     50%{
-
+        width: 180px;
+        height: 64px;
+        display: block;
+        border-radius: 8px;
+        border: 2px solid palevioletred;
+        background-color: white;
+        box-shadow: 0px 0px 0 palevioletred;
+        color: black;
     }
 
     100%{
-
+        width: 200px;
+        height: 64px;
+        display: block;
+        border-radius: 4px;
+        border: 2px solid rgb(223, 155, 177);
+        background-color: rgb(223, 155, 177);
+        box-shadow: 0px 0px 0 palevioletred;
+        color: white;
     }
 }
 
@@ -23,12 +45,23 @@ muitas vezes, o navegador nao aceita animacoes em css (pois o mesmo é muito ant
     width: 200px;
     height: 64px;
     display: block;
-    border-radius: 6px;
-    border: 2px solid blue;
+    border-radius: 4px;
+    border: 2px solid palevioletred;
     margin: 100px auto;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     line-height:64px;
     text-decoration: none;
     color: rgb(210, 95, 114);
+    background-color: #fff;
+    box-shadow: 8px 8px 0 palevioletred;
+    transition: all 0.3s ease-out;
+} /*transition: all-pega todos os elementos da classe btn, dura 0.3 segundos e é do tipo ease-out*/
+
+.btn:hover{
+    animation: btn 0.6s forwards;
+    /*animation- e a animacao
+    transition- como e a transicao da animacao
+    as animacoes sao reaproveitaveis no projeto
+    */
 }
