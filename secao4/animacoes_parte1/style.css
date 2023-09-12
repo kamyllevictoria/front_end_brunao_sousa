@@ -1,14 +1,38 @@
 @keyframes example {
-    from {
+    /*Podemos usar porcentagens ao inves de from e to.*/
+    0%{
         background-color: blue;
         width: 200px;
         height: 200px;
+        border-radius: 0;
     }
-    to{
+
+    30%{
         background-color: red;
         width: 400px;
         height: 100px;
+        transform: translate(300px, 300px);
+        transform: rotate(0deg);
+        border-radius: 0; /*tiramos a borda redonda, logo, ele permanece quadrado*/
     }
+    70%{
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        transform: translate(0, 0);
+        transform: rotate(0deg);
+        border-radius: 50%;
+    }
+    100%{
+        background-color:blue;
+        width: 200px;
+        height: 200px;
+        transform: translate(800px, 600px);
+        transform: rotate(360deg);
+        border-radius: 0;
+    }
+    /*usamos o transform para modificarmos os movimentos*/
+    /*rotate- rotações, usamos deg como unidade de medida*/
 }
 /*Usamos os keyframes para dar inicio as animações, pois so usando o transition e o transform, nao ira funcionar*/
 
@@ -32,7 +56,7 @@ main{
     height: 100px;
     background-color: blue;
     transition: all 3s ease-in;
-    animation: example 3s forwards;
+    animation: example 3s infinite;
 }
 
 /*animation: name duration play-state
