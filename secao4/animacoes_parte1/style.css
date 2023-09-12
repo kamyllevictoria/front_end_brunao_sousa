@@ -1,0 +1,43 @@
+@keyframes example {
+    from {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+    }
+    to{
+        background-color: red;
+        width: 400px;
+        height: 100px;
+    }
+}
+/*Usamos os keyframes para dar inicio as animações, pois so usando o transition e o transform, nao ira funcionar*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: block;
+    width: 80%;
+    height: 800px;
+    background-color: #c3c5c6;
+    margin: 100px auto;
+}
+
+.quadrado{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: all 3s ease-in;
+    animation: example 3s forwards;
+}
+
+/*animation: name duration play-state
+essas sao as caracteristicas que usamos no animation, o nome do keyframe, sua duração em segundos e quando ira se repetir, aqui, com o forwards, a animacao executa so uma vez e depois para. Se usarmos o infinity, ele ira executar para sempre.*/
+
+/*o animation executa todas as caracteristicas do keyframe (que indica os pontos de mudança das nossas animações, ou seja, nesse caso iria sair do from e iria para o to)*/
+
+/*O ideal, é que nossa animacao possua a mesma duracao do transition, para ficar certinho e nao dar erro na hora da animação, pois dois tempos distintos, não fica muito legal*/

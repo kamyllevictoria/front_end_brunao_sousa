@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+
+
+.container{
+    display: flex;
+    background-color: lightpink;
+    width: 80%;
+    height: 600px;
+    margin: 60px auto;
+    padding-top: 60px;
+    border-radius: 10px;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-around;
+}
+
+.item{
+    background-color: rgb(244, 117, 136);
+    border-radius: 5px;
+    padding: 10px;
+    border: 4px solid rgb(255, 255, 255);
+    height: 50px;
+}
+
+.order-1{
+    order: 1;
+}
+
+.order-2{
+    order: 2;
+}
+
+.order-3{
+    order: 3;
+}
+
+.order-4{
+    order: 4;
+}
+
+.order-5{
+    order:5;
+}
+
+.grow-1{
+    flex-grow: 1;
+}
+
+.grow-2{
+    flex-grow: 2;
+}
+
+.grow-3{
+    flex-grow: 3;
+}
+
+
+
+.shrink-1{
+    flex-shrink: 1;
+}
+
+.shrink-2{
+    flex-shrink: 2;
+}
+
+.shrink-3{
+    flex-shrink: 3;
+}
+
+.shrink-4{
+    flex-shrink: 4;
+}
+
+.shrink-5{
+    flex-shrink: 5;
+
+}
+
+.flex-grow-3{
+    flex: 3 1 auto; 
+}
+.flex-shrink-3{
+    flex: 0 3 1500px; 
+}
+
+.self-top{
+    align-self: flex-start;
+}
+
+.self-center{
+    align-self: center;
+}
+/*O que é o flexbox? é uma propriedade que nos permite criar uma box container, célula pai, que deixa passar para seus elementos filhos outras caracteristicas para os demais layouts, é mais flexivel com alinhamento e distribuição para as celulas filhas.
+O bootstrap é baseado no flexbox.
+O flexbox faz as celulas filhas ocuparem todo o espaço disponivel.
+
+flex-basis= é uma espécie de comprimento para a celula filha, porem, dentro do display flex. apesar de termos 6 células, elas estarão adaptadas na tela de resoluçaõ 100%, ou seja, ele distribui todos os elementos em uma row, pega os 25% como base, mas não o usa diretamente para não precisar quebrar linha (6 células ocupando 25% resultariam em 150%). Recalcula o tamanho de cada célula. Para que essa quebra de linha ocorra, usamos o flex wrap.
+
+flex wrap=
+wrap= ocorre a quebra de linha e os padroes são mantidos.
+nowrap= não ocorre quebra de linha e os padroes são adaptados
+*/
+/*O flex flow agrupa os dois conceitos de flex-wrap e flex-direction, primeiro adicionamos o valor do direction e depois do wrap
+
+O align-items controla o alinhamendo de todos os itens da nossa div no eixo transversal, serve para uma linha.
+O align-content serve para todas as linhas.
+*/
+
+/*Order=permite reordenarmos a ordem dos elementos de um container, ou seja, a posição que cada um terá, para isso, usamos as propriedades de classes em html e css.
+
+Grow= permite que uma célula cresca proporcionalmente conforme o espaço que está disponivel no local. Quando a propriedade recebe um padrão 0, ele permite que todos os elementos permaneçam no seu tamanho normal pré-definido. Quando recebe o valor '1' todas as celulas filhas passam a ocupar um espaço, de modo proporcional, é claro.
+
+Shrink= permite a diminuição dos itens do nosso flexbox.Os itens precisam ultrapassar a largura do nosso container, pois assim ele poderá agir efetivamente e diminuir proporcionalmente.
+
+shorthand= é uma especia de simplificação dos comando que derivam do flex, primeiro temos o grow, shrink e basis. Os valores do grow, shrink e basis são, respectivamente, 0, 1 e auto, e também podemos personaliza-los.
+na shorthand, quando usamos o shrink, ele pode muitas vezes nao funcionar, pq os elementos nao ultrapassaram o valor maximo da div container, logo, precisamos ver o valor do container e informar um parametro que ultrapasse-a, ou seja, em pixels.
+
+O align-self= permite que pegar um elemento unico em uma row ou column para mudarmos seu posicionamento.
+*/
