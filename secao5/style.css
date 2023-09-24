@@ -1,0 +1,43 @@
+body{
+    background-color: #f2f2f2;
+}
+
+.box{
+    margin: 0 auto;
+    display: block;
+    max-width: 600px;
+    height: 200px;
+    background-color: #51237c;
+}
+
+.form-field{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border: 0;
+    margin: 0 auto;
+}
+
+.form-field input{
+    width: 500px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.validate{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+    border: 0;
+    background-color: #23cf97;
+    color: #51237c;
+    font-weight: bold;
+    align-items: center;
+}
+    
+.validate:hover{
+    background-color: rgb(135, 85, 178);
+    color: #23cf97;
+}

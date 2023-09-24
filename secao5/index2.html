@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais parte 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+
+        <form class="my-form">
+            <div class="form-field" id="form-field-name">
+                <input type="text" name="name" id="name" placeholder="Your name">
+                <span></span>
+            </div>
+    
+            <div class="form-field" id="form-field-email">
+                <input type="email" name="email" id="email" placeholder="Your e-mail">
+                <span></span>
+        </form>
+        </div>
+    </div>
+    <button class="validate" onclick="validaForm()">VALIDAR</button>
+    
+    <script>
+        var isEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+
+        var filedEmail = document.getElementById("email");
+        var filedName = document.getElementById("name");
+
+        function validaForm(){
+            var nomeStr = filedName.value;
+            var emailStr = filedEmail.value;
+            console.log(nomeStr, emailStr);
+
+            if (nomeStr.length > 0 && nomeStr.length >= 3)
+            {
+                console.log("SUCESS!");
+            }
+            else{
+                console.log("ERROR!");
+            }
+        }
+
+    </script>
+</body>
+</html>
