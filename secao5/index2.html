@@ -33,15 +33,41 @@
             var nomeStr = filedName.value;
             var emailStr = filedEmail.value;
             console.log(nomeStr, emailStr);
+            var wrapperName = document.getElementById("form-field-name");
+            var wrapperEmail = document.getElementById("form-field-email");
+
 
             if (nomeStr.length > 0 && nomeStr.length >= 3)
             {
-                console.log("SUCESS!");
+                wrapperName.querySelector("span").classList.add("sucess");
+                wrapperName.querySelector("span").innerText = "Validado com sucesso.";
+                //console.log("SUCESS NAME!");
             }
-            else{
-                console.log("ERROR!");
+            else
+            {
+                //console.log("ERROR NAME!");
+                wrapperName.querySelector("span").classList.add("error");
+                wrapperName.querySelector("span").innerText = "Sem sucesso na validação.";
+            } 
+
+            if(isEmail.test(emailStr))
+            {
+                //console.log("SUCESS EMAIL!")
+                wrapperEmail.querySelector("span").classList.add("sucess");
+                wrapperEmail.querySelector("span").innerText = "Validado com sucesso.";
+            }
+            else
+            {
+                //console.log("ERROR EMAIL.")
+                wrapperEmail.querySelector("span").classList.add("error");
+                wrapperEmail.querySelector("span").innerText = "Sem sucesso na validação.";
             }
         }
+
+
+
+
+
 
     </script>
 </body>
