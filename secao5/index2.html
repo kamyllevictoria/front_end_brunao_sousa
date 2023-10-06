@@ -36,8 +36,25 @@
             var wrapperName = document.getElementById("form-field-name");
             var wrapperEmail = document.getElementById("form-field-email");
 
+            switch(nomeStr.length){
+                case 1:
+                    wrapperName.querySelector('span').innerText = "Número invalido de caracteres."
+                    wrapperName.querySelector('span').classList.add('error')
+                    break;
+                case 2:
+                    wrapperName.querySelector('span').innerText = "Número invalido de caracteres."
+                    wrapperName.querySelector('span').classList.add('error')
+                    break;
+                    case 3:
+                    wrapperName.querySelector('span').innerText = "Que nome pequeno! Cadastro validado!"
+                    wrapperName.querySelector('span').classList.add('sucess')
+                    break;
+                    default:
+                    wrapperName.querySelector('span').innerText = 'Nome cadastrado com sucesso.'
+                    wrapperName.querySelector('span').classList.add('sucess')
+            }
 
-            if (nomeStr.length > 0 && nomeStr.length >= 3)
+            /*if (nomeStr.length > 0 && nomeStr.length >= 3)
             {
                 wrapperName.querySelector("span").classList.add("sucess");
                 wrapperName.querySelector("span").innerText = "Validado com sucesso.";
@@ -48,7 +65,7 @@
                 //console.log("ERROR NAME!");
                 wrapperName.querySelector("span").classList.add("error");
                 wrapperName.querySelector("span").innerText = "Sem sucesso na validação.";
-            } 
+            }*/
 
             if(isEmail.test(emailStr))
             {
