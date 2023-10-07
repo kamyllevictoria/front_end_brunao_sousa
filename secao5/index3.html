@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        .box{
+            width: 450px;
+            height: 200px;
+            display: block;
+            margin: 60px auto;
+            background-color: indigo;
+            color: mediumaquamarine;
+            text-align: center;
+            line-height: 200px;
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: bold;   
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        Cat!
+    </div>
+    <div class="box">
+        Cat!
+    </div>
+    <div class="box">
+        Cat!
+    </div>
+    <div class="box">
+        Cat!
+    </div>
+    <div class="box">
+        Cat!
+    </div>
+    <script>
+        var myBox = document.getElementById('box')
+        var allBoxes = document.querySelectorAll('.box')
+        myBox.addEventListener('mouseenter', function(){
+            //window.alert('Você clicou na primeira box!')
+            for(i = 0; allBoxes.length > i; i++){
+                allBoxes[i].style.backgroundColor = 'lightblue'
+                allBoxes[i].style.color = 'blue'
+            }
+        })
+        
+        myBox.addEventListener('mouseout', function(){
+            //window.alert('Você clicou na primeira box!')
+            for(i = 0; allBoxes.length > i; i++){
+                allBoxes[i].style.backgroundColor = 'indigo'
+                allBoxes[i].style.color = 'mediumaquamarine'
+            }
+        })
+
+        window.addEventListener('scroll', function(){
+            console.log(pageYOffset)
+            if(window.pageYOffset > 100 && window.pageYOffset < 110){
+                for(i = 0; allBoxes.length > i; i++){
+                allBoxes[i].style.backgroundColor = 'lightblue'
+                allBoxes[i].style.color = 'blue'
+            }
+            }
+        })
+    </script>
+</body>
+</html>
