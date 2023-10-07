@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        .box{
+            width: 450px;
+            height: 200px;
+            display: block;
+            margin: 60px auto;
+            background-color: indigo;
+            color: mediumaquamarine;
+            text-align: center;
+            line-height: 50px;
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: bold;   
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <script>
+        var myBox = document.getElementById('box')
+        function myInfo(x,y,z)//parametros das funcoes
+        {
+            var myCalc = (x + y)/z
+            myBox.innerText = "Resultado da operação:"
+            myBox.append(myCalc)
+        }
+
+        myInfo(6,6,2)
+    </script>
+</body>
+</html>
