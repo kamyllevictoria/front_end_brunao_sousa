@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays parte 1</title>
+    <style>
+        .frutas{
+            width: 450px;
+            height: auto;
+            display: table;
+            padding: 30px;
+            margin: 60px auto;
+            background-color: indigo;
+            border-radius: 8px;
+            list-style: none;
+        }
+        .frutas_li{
+            color: mediumaquamarine;
+            text-align: center;
+            line-height: 40px;
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul class="frutas" id="frutas"></ul>
+    <script>
+        var listaFrutas = document.getElementById('frutas')
+        var frutas = ["Banana" , "Uva" ,"Pera"]
+
+        frutas.push("Cacau") //acrescenta elementos no final do array
+        frutas.shift() //remove itens do começo do array
+        frutas.unshift() //adiciona itens no comeco do array
+        frutas.indexOf() //procura indices de um item no array, precisamos informar parametros 
+        frutas.pop() //remove o ultimo elemento do array
+        frutas.splice()//remove o item do array pela posicao do indice (frutas.splice(pos, 1))
+        frutas.slice()//copia um array
+        console.log(frutas)
+    </script>
+</body>
+</html>
