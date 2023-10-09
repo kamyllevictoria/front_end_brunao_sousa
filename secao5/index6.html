@@ -8,16 +8,16 @@
 </head>
 <body>
     <main>
-        <div class="container" id="card">
+        <div class="card-container" id="card">
                 <img src="./images_6/cat2.jpg" alt="cat" title="cat" class="card-img">
             <div class="card-body">
-                <h1>Nome do gatinho:</h1>
+                <h1>Nome ou tipo de gatinho:</h1>
                 <p>
                     Descrição do gatinho
                 </p>
             </div>
             <div class="card-footer">
-                <input type="text" name="myinput" id="myinput" placeholder="Insira o nome do Gatinho:">
+                <input type="text" id="myinput" placeholder="Insira o nome do Gatinho:">
                 <a class="btn" id="btn">
                     <p>Buscar</p>
                 </a>
@@ -31,25 +31,52 @@
             //se tivermos mais de um agto, devemos passar suas caracteristcias em um array!
             {
                 "id": 1,
-                "nome": "gato_amarelo",
+                "nome": "Gato amarelo",
                 "fotoURL": "images_6/gatoamarelo.webp",
                 "fotoExterna": "https://petcaramelo.com/racas-de-gato/gato-amarelo/",
             },
 
             {
                 "id": 2,
-                "nome": "gato_preto",
+                "nome": "Gato preto",
                 "fotoURL": "images_6/gatopretojpg",
                 "fotoExterna": "https://www.uol.com.br/nossa/noticias/redacao/2022/10/31/qual-a-origem-da-supersticao-que-relaciona-gato-preto-a-mau-agouro.htm",
             },
             {
                 "id": 3,
-                "nome": "gato_branco",
+                "nome": "Gato branco",
                 "fotoURL": "images_6/gatobranco.avif",
                 "fotoExterna": "https://br.freepik.com/fotos-premium/um-gato-branco-com-focinho-rosa-e-rabo-amarelo_42597421.htm",
             },
         ]
-    } //apis sao usadas para fazer requisicoes https que "conectam" elementos à links e imagens externas
+    } 
+    //apis sao usadas para fazer requisicoes https que "conectam" elementos à links e imagens externas
     //a api retorna um arquivo json, que é um formato leve para transportar dados sobre gatos, por exemplo 
+
+    var cardGato = document.getElementById('card')
+    var btn = document.getElementById("btn")
+    
+    //fazemos um loop para checar se existe um gato com esse nome
+    
+    function getGato(){
+        //pegamos o valor do input-field
+        var inputGato = document.getElementById('myinput').value
+  
+        for(var i = 0; i < meusGatos.gato.length; i++){
+            if(inputGato == meusGatos.gato[i].nome){
+                console.log("Encontramos o gato!")
+
+                break
+            }
+            else{
+                console.log("Não encontramos o gato.")
+            }
+        }
+    }
+
+    //rodamos a função getGato ao clicar no botao
+    btn.addEventListener('click', getGato)
+    
+
 </script>
 </html>

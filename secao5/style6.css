@@ -8,7 +8,7 @@ body{
     background-color:#ececec;
 }
 
-.container{
+.card-container{
     display: block;
     margin: auto;
     margin-top: 50px;
@@ -20,7 +20,7 @@ body{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.177);
 }
 
-.container img{
+.card-container img{
     width: 380px;
     height: 350px;
     display: flex;
@@ -52,6 +52,7 @@ body{
     border: none;
     background-color: #ececec;
     border-radius: 10px;
+    color: #894ed8;
 }
 
 .card-footer a{
