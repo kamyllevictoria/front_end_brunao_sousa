@@ -23,22 +23,48 @@
             font-family: monospace;
             font-weight: bold;
         }
+
+        li{
+            color: white;
+            font-family: monospace;
+            font-size: 26px;
+        }
     </style>
 </head>
 <body>
-    <ul class="frutas" id="frutas"></ul>
+    <ul class="frutas" id="frutas">
+
+    </ul>
+
     <script>
         var listaFrutas = document.getElementById('frutas')
-        var frutas = ["Banana" , "Uva" ,"Pera"]
 
-        frutas.push("Cacau") //acrescenta elementos no final do array
-        frutas.shift() //remove itens do começo do array
-        frutas.unshift() //adiciona itens no comeco do array
-        frutas.indexOf() //procura indices de um item no array, precisamos informar parametros 
-        frutas.pop() //remove o ultimo elemento do array
-        frutas.splice()//remove o item do array pela posicao do indice (frutas.splice(pos, 1))
-        frutas.slice()//copia um array
-        console.log(frutas)
+        var frutas = ["Banana" , "Uva" ,"Pera"]
+        
+        var myList = []
+        console.log(myList)
+
+        for (var i = 0; frutas.length > i; i++){
+            myList.push('<li>'+frutas[i]+'</li>') //inserimos elementos na lista ul
+        }
+        //para inserirmos um html em outro html, ou seja, colocarmos um li dentro de um ul, usamos a propriedade element.insert.AdjacentHTML(position, text)
+        //os parametros position e text são informados para posicionarmos o elemento e informar seu conteudo em texto.
+
+        listaFrutas.insertAdjacentHTML('beforeend', myList.join(''))
+        
+        //a listaFrutas recebe os elementos html do myList, depois 'beforeened'
+
+        //quando colocamos os elementos no html. as virgulas do array tambem sao interpretadas como elementos textuais, logo, para removermos, usamos o join(), que define o caractere que une os arrays. Quando deixamo0o vazio, retiramos a virgula.
+        
+
+        //frutas.push("Cacau") //acrescenta elementos no final do array
+        //frutas.shift() //remove itens do começo do array
+        //frutas.unshift() //adiciona itens no comeco do array
+        //frutas.indexOf() //procura indices de um item no array, precisamos informar parametros 
+        //frutas.pop() //remove o ultimo elemento do array
+        //frutas.splice()//remove o item do array pela posicao do indice (frutas.splice(pos, 1))
+        //frutas.slice()//copia um array
+        
     </script>
 </body>
 </html>
