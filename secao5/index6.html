@@ -8,8 +8,8 @@
 </head>
 <body>
     <main>
-        <div class="card-container" id="card">
-                <img src="./images_6/cat2.jpg" alt="cat" title="cat" class="card-img">
+        <div class="card-container">
+            <a href="#" target="_blank" class="external_link"> <img src="images_6/cat2.jpg" alt="cat" title="cat" class="card-img"></a>
             <div class="card-body">
                 <h1>Nome ou tipo de gatinho:</h1>
                 <p>
@@ -26,57 +26,58 @@
     </main>
 </body>
 <script>
-    meusGatos = { //objeto
+    var meusGatos = {
         gato: [
-            //se tivermos mais de um agto, devemos passar suas caracteristcias em um array!
             {
                 "id": 1,
                 "nome": "Gato amarelo",
                 "fotoURL": "images_6/gatoamarelo.webp",
                 "fotoExterna": "https://petcaramelo.com/racas-de-gato/gato-amarelo/",
+                "descricao": "Gatinhos amarelos são sempre animados e muito amorosos com seus donos!"
             },
-
             {
                 "id": 2,
                 "nome": "Gato preto",
-                "fotoURL": "images_6/gatopretojpg",
+                "fotoURL": "images_6/gatopreto.jpg",
                 "fotoExterna": "https://www.uol.com.br/nossa/noticias/redacao/2022/10/31/qual-a-origem-da-supersticao-que-relaciona-gato-preto-a-mau-agouro.htm",
+                "descricao": "Gatinhos preto são sempre charmosos e muito amorosos com seus donos!"
             },
             {
                 "id": 3,
-                "nome": "Gato branco",
-                "fotoURL": "images_6/gatobranco.avif",
-                "fotoExterna": "https://br.freepik.com/fotos-premium/um-gato-branco-com-focinho-rosa-e-rabo-amarelo_42597421.htm",
+                "nome": "Gato frajola",
+                "fotoURL": "images_6/frajolinhaa.webp",
+                "fotoExterna": "https://www.patasdacasa.com.br/noticia/gato-frajola-conheca-caracteristicas-do-gato-preto-e-branco",
+                "descricao": "Gatinhos brancos são sempre animados e muito carismaticos com seus donos!"
             },
         ]
-    } 
-    //apis sao usadas para fazer requisicoes https que "conectam" elementos à links e imagens externas
-    //a api retorna um arquivo json, que é um formato leve para transportar dados sobre gatos, por exemplo 
+    };
 
-    var cardGato = document.getElementById('card')
-    var btn = document.getElementById("btn")
-    
-    //fazemos um loop para checar se existe um gato com esse nome
-    
-    function getGato(){
-        //pegamos o valor do input-field
-        var inputGato = document.getElementById('myinput').value
-  
-        for(var i = 0; i < meusGatos.gato.length; i++){
-            if(inputGato == meusGatos.gato[i].nome){
-                console.log("Encontramos o gato!")
+    var cardGato = document.querySelector('.card-container');
+    var btn = document.getElementById("btn");
 
-                break
+    function getGato() {
+        var inputGato = document.getElementById('myinput').value.toLowerCase();
+        var gatoEncontrado = false;
+
+        for (var i = 0; i < meusGatos.gato.length; i++) {
+            var cat = meusGatos.gato[i];
+
+            if (inputGato === cat.nome.toLowerCase()) {
+                cardGato.querySelector('h1').innerHTML = cat.nome;
+                cardGato.querySelector('p').innerHTML = cat.descricao
+                cardGato.querySelector('img').setAttribute('src', cat.fotoURL);
+                cardGato.querySelector('.external_link').setAttribute('href', cat.fotoExterna);
+                gatoEncontrado = true;
+                break;
             }
-            else{
-                console.log("Não encontramos o gato.")
-            }
+        }
+
+        if (!gatoEncontrado) {
+            console.log("Não encontramos o gato.");
+            cardGato.querySelector('h1').innerHTML = "Gato não encontrado";
         }
     }
 
-    //rodamos a função getGato ao clicar no botao
-    btn.addEventListener('click', getGato)
-    
-
+    btn.addEventListener('click', getGato);
 </script>
 </html>

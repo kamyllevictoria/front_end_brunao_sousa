@@ -19,7 +19,9 @@ body{
     box-sizing: border-box;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.177);
 }
-
+.card-container .external_link{
+    border: none;
+}
 .card-container img{
     width: 380px;
     height: 350px;
