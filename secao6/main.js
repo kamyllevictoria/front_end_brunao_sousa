@@ -24,20 +24,30 @@ var meusGatos = {
     ]
 };
 
-$(function(){//estrutura base do jquery{
-    var cardGatoJquery = $('#card')
-    var btnJquery = $('#btn')
-    
+$(function () {
+    var cardGatoJquery = $('#card');
+    var btnJquery = $('#btn');
 
-    function getGato(){
-        //pegamos o valor do inputField
-        var inputGato = $('#myinput').val().toLowerCase()
-        console.log(inputGato)
+    function getGato() {
+        var inputGato = $('#myInput').val();
+
+        for (var i = 0; i < meusGatos.length; i++) {
+            var cat = meusGatos[i];
+            console.log(cat.nome);
+
+            if (inputGato == cat.nome.toLowerCase()) {
+                $('#card h1').html(cat.nome)
+                $('#card p').html(cat.descricao)
+                $('#card img').attr('src' ,cat.fotoURL)
+                $('.external-link').attr('href' ,cat.fotoExterna)
+            } else {
+                $('#card h1').html('Não encontramos gatinho algum')
+            }
+        }
     }
 
-    
-    getGato()
-})
+   btnJquery.click(getGato())
+});
 
 
 
