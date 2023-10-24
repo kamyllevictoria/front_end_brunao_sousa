@@ -37,8 +37,8 @@
     <h1 class="item-vermelho">Vermelho 3</h1>
 
     <div class="my-btn">
-        <button onclick="facaAzul()">Azul</button>
-        <button onclick="facaVermelho()">Vermelho</button>
+        <button id="faca-azul">Azul</button>
+        <button id="faca-vermelho">Vermelho</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -46,14 +46,23 @@
     <script>
         // $ é o simbolo do jquery
         $(function(){
-            var azuis = $('.item-azul')
-            var vermelhos = $('.item-vermelho')
-            //apos o .item-azul, podemos usar :first-child, que altera somente o primeiro elemento
+         var azuis = $('.item-azul');
+        var vermelhos = $('.item-vermelho');
+        var btnAzuis = $('#faca-azul');
+        var btnVermelhos = $('#faca-vermelho');
 
-            azuis.css('color', 'blue')
-            //usar last() altera somente o ultimo elemento
+        btnAzuis.click(function(){
+            $('body').css('background-color', 'blue');
+            azuis.css('color', 'blue');
+            vermelhos.css('color' , 'black')
+        });
+
+        btnVermelhos.click(function(){
+            $('body').css('background-color', 'red');
             vermelhos.css('color' ,'red')
-        })
+            azuis.css('color', 'black');
+        }); 
+    });
         
 
 
