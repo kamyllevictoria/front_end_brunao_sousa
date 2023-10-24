@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        h1{
+            width: 300px;
+            height: 50px;
+            margin: 15px auto;
+            display: block;
+            background-color: #f2f2f2;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 50px;
+        }
+        .my-btn{
+            display: block;
+            width: 300px;
+            height: 50px;
+            margin: 15px auto;
+        }
+        .my-btn button{
+            width: 50%;
+            height: 40px;
+            float: left;
+        }
+    </style> 
+</head>
+<body style="text-align: center; margin-top: 100px;">
+    <h1 class="item-azul">Azul 1</h1>
+    <h1 class="item-azul">Azul 2</h1>
+    <h1 class="item-azul">Azul 3</h1>
+
+    <h1 class="item-vermelho">Vermelho 1</h1>
+    <h1 class="item-vermelho">Vermelho 2</h1>
+    <h1 class="item-vermelho">Vermelho 3</h1>
+
+    <div class="my-btn">
+        <button onclick="facaAzul()">Azul</button>
+        <button onclick="facaVermelho()">Vermelho</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // $ é o simbolo do jquery
+        $(function(){
+            var azuis = $('.item-azul')
+            var vermelhos = $('.item-vermelho')
+            //apos o .item-azul, podemos usar :first-child, que altera somente o primeiro elemento
+
+            azuis.css('color', 'blue')
+            //usar last() altera somente o ultimo elemento
+            vermelhos.css('color' ,'red')
+        })
+        
+
+
+        
+    </script>
+
+</body>
+
+</html>

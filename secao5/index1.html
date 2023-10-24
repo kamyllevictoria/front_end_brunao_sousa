@@ -57,6 +57,7 @@
 
             for(i = 0 ; vermelho.length > i ; i++) {
                 vermelho[i].style.display = "none";
+                vermelho[i].style.color = "blue";
             }
             
             document.body.style.backgroundColor = "blue";
@@ -64,17 +65,23 @@
         } //o problema dessa função é que só é aplicada em um unico item, com o queryselector (sem o all), logo, para a cor azul ser aplicada em todos os elementos que posseum a classe "item-azul", usaremos o seguinte codiog:
         //explicação do codigo for= para todo i == 0, enquanto azul,length(o tamanho do nosso array azul, que é 3, for maior do que o valor inicial de i (que é igual à zero), incrementamos o i++ para todos os elementos receberem a caracteristica, logo, a cada loop, incrementamos 1 no i, logo, quando i for maior do que trez, o loop para de funcionar)
         //logo, para todo i menor ou igual do que 3, aplique a propriedade de cor azul!
+
+
         function facaVermelho(){
             var i = 0;
-            for (i = 0 ; vermelho.length > i; i ++){
+            for(i = 0 ; vermelho.length > i ; i++) {
                 vermelho[i].style.color = "red";
+
             }
+
             for(i = 0 ; azul.length > i ; i++) {
                 azul[i].style.display = "none";
+                azul[i].style.color = "red";
             }
+            
             document.body.style.backgroundColor = "red";
-        }
-       
+            
+        } 
     </script>
 
 </body>
