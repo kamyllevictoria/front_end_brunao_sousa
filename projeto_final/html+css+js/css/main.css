@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 @media screen and (min-width: 320px){
 
     .jl-page-wrapper{
@@ -35,8 +36,9 @@
         height: 31px;
         display: block;
         margin: 55px auto 0px auto;
-
-     
+    }
+    .jl-menu{
+        display: none;
     }
 }
 
@@ -49,6 +51,46 @@
 }
 
 @media screen and (min-width: 992px){
+    .jl-menu{
+        display: table;
+        float: left;
+        height: 110px;
+        margin-left: 30px;
+    }
+    .jl-menu a{
+        text-decoration: none;
+        color: #BCBCBC;
+        font-size: 16px;
+        text-transform: lowercase;
+        font-family: 'Open Sans';
+        display: inline-block;
+        margin: 50px 20px 0px 20px;
+        position: relative;
+    }
+
+    .jl-menu a:hover {
+        color: #2CCB69;
+    }
+    
+    .jl-menu a:first-child {
+        margin-left: 0;
+    }
+    
+    .jl-menu a:before {
+        content: '';
+        width: 0;
+        height: 4px;
+        background-color: #2CCB69;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: all 0.2s ease-out;
+    }
+    
+    .jl-menu a:hover:before {
+        width: 100%;
+    }
     
 }
 
