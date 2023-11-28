@@ -60,10 +60,6 @@ p{
         z-index: 200;
         transition: all 0.2s ease-out;
     }
-
-    .jl-btn-contact:hover{
-        background-position-y: -45px; /*quando colocamos o back-position-y -45px, quando posicionamos o mouse pelo o efeito hover, a segunda parte do icone aparece, pq ela diminui 45px*/
-    }
     .jl-contact-info{
         width: 245px ;
         height: 165px;
@@ -73,6 +69,7 @@ p{
         bottom: 115px;
         right: 65px;
         z-index: 200;
+        display: none;
     }
 
     .jl-contatc-info-inner{
@@ -121,7 +118,7 @@ p{
         height: 25px;
         display: block;
         position: absolute;
-        bottom: -25px;
+        bottom: -23px;
         right: 0;
         background: transparent url('../images/corner.svg') no-repeat;
 
@@ -232,4 +229,13 @@ p{
 }
 .jl-bg-light{
     background-color:#bcbcbc;
+}
+
+/*CLASSES DE COMPORTAMENTO*/ 
+.jl-is-open{
+    display: block;
+}
+
+.jl-change-icon{
+    background-position-y: -45px; /*quando colocamos o back-position-y -45px, quando posicionamos o mouse pelo o efeito hover, a segunda parte do icone aparece, pq ela diminui 45px*/
 }
