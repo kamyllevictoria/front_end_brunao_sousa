@@ -12,13 +12,31 @@ p{
 
 @media screen and (min-width: 320px){
 
-    .jl-page-wrapper{
+    .jl-page-wrapper, .jl-preloader{
         width: 100%;
         height: 100vh;
         display: block;
         background-color: #1C1C1C;
         border: 30px solid #000;
     }
+
+    .jl-preloader{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        position: fixed;
+        top:0;
+        left: 0;
+    }
+    .jl-preloader-inner{
+        margin-top: -45px;
+        margin-right: -100px;
+    }
+    
+
     .jl-topbar{
         width: 100%;
         height: 110px;
@@ -59,7 +77,10 @@ p{
         border-radius: 50%;
         z-index: 200;
         transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
     }
+
     .jl-contact-info{
         width: 245px ;
         height: 165px;
@@ -123,6 +144,7 @@ p{
         background: transparent url('../images/corner.svg') no-repeat;
 
     }
+    
 }
 
 @media screen and (min-width: 576px){
@@ -229,6 +251,38 @@ p{
 }
 .jl-bg-light{
     background-color:#bcbcbc;
+}
+
+
+.jl-mar15{
+    margin: 15px;
+}
+.jl-mar-top-15{
+    margin-top: 15px;
+}
+.jl-mar-bottom-15{
+    margin-bottom: 15px;
+}
+.jl-mar-rigth-15{
+    margin-right: 15px;
+}
+.jl-mar-left-15{
+    margin-left: 15px;
+}
+.jl-pad15{
+    padding: 15px;
+}
+.jl-pad-top-15{
+    padding-top: 15px;
+}
+.jl-pad-bottom-15{
+    padding-bottom: 15px;
+}
+.jl-pad-right-15{
+    padding-right: 15px;
+}
+.jl-pad-left-15{
+    padding-left: 15px;
 }
 
 /*CLASSES DE COMPORTAMENTO*/ 
