@@ -317,7 +317,59 @@ p{
     
 }
 
-/*CLASSES UTILITARIAS*/
+
+/*btn classes*/
+.jl-btn{
+    display: table;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+.jl-btn-medium{
+    height: 35px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.jl-btn-large{
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+.jl-btn-small{
+    height: 28px;
+    padding: 0 20px;
+    border-radius: 14px;
+    font-size: 12px;
+}
+
+.jl-btn-green{
+    background-color: #2CCB69;
+    color: #000;
+}
+
+.jl-btn-green:hover{
+    background-color: rgb(6,135,55);
+    color: #fff;
+}
+
+.jl-btn-black{
+    background-color: #000;
+    color: #2CCB69;
+}
+
+.jl-btn-black:hover{
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+
+
+/*utility classes*/
 
 .jl-title{
     font-family: "Abril Fatface", serif;
@@ -399,3 +451,6 @@ p{
 .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
 }
+
+
+
