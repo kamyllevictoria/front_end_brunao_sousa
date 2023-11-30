@@ -17,8 +17,8 @@
 			stroke-miterlimit:10;
 			stroke-dasharray: 500;
 			stroke-dashoffset: 1000;
-			animation: lineGrow 4s infinite ease-out;
-		}
+			animation: lineGrow 3s infinite ease-out;
+		}000
 
 </style>
 <g>

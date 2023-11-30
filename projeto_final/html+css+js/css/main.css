@@ -21,7 +21,7 @@ p{
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
         height: 100vh;
-        display: block;
+        display: table;
         background-color: #1C1C1C;
         border: 30px solid #000;
     }
@@ -151,9 +151,16 @@ p{
         bottom: -23px;
         right: 0;
         background: transparent url('../images/corner.svg') no-repeat;
-
     }
-    
+    /*Bootstrap*/
+    .jl-display-text{
+        margin-top: 10%;
+    }
+    #jl-home-presentation{
+        background-image: url(../images/joao-lemon-designer-home.png);
+        background-repeat: no-repeat;
+        background-position: 50% bottom;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -240,7 +247,9 @@ p{
     font-family: "Abril Fatface", serif;
     font-weight: normal;
 }
-
+.jl-title-big{
+    font-size: 120px;
+}
 .jl-text-green{
     color:#2CCB69;
 }
@@ -291,6 +300,16 @@ p{
 .jl-pad-left-15{
     padding-left: 15px;
 }
+.jl-full-height{
+    height: 100vh;
+    background-color: #1C1C1C;
+    border-bottom: 5px solid #2CCB69;
+}
+.jl-first-section{
+    height: calc(100vh -30px);
+}
+
+
 
 /*CLASSES DE COMPORTAMENTO*/ 
 .jl-is-open{
