@@ -29,10 +29,50 @@
             </button>
         </div>
         <div class="jl-modal-body">
-            <p class="jl-text-light">Please, fill in the details below and i'll get back to you as soon as possible! </p>
-            <form>
-                <input type="text" name="name" id="jl-name">
-            </form>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="jl-text-light">Please, fill in the details below and i'll get back to you as soon as possible! </p>
+                </div>
+            </div>
+
+            <div class="row jl-mar-top-15">
+                <div class="col-sm-12">
+                    <form class="jl-form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="name">Name:</label>
+                                <input type="text" name="name" id="jl-name" class="jl-field">
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light"  for="email">Email:</label>
+                                <input type="email" name="email" id="jl-email" class="jl-field">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="number">Phone number:</label>
+                                <input type="tel" name="number" id="jl-name" class="jl-field">
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="site">Website:</label>
+                                <input type="text" name="site" id="jl-name" class="jl-field">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 jl-mar-top-15">
+                            <label class="jl-text-light" for="jl-msg">Describe the project you need my help: </label>
+                            <textarea class="jl-text-area" name="jl-msg" id="jl-msg" rows="8"></textarea>
+                        </div>
+
+                        <div class="row justify-content-end">
+                            <div class="col-sm-12 col-md-6 jl-mar-top-15">
+                                <button class="jl-btn jl-btn-large jl-btn-green jl-btn-block">Send</button>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -65,27 +105,21 @@
                 </div>
             </div>
             <div class="jl-corner"></div>
-            
         </div>
 
         <button class="jl-btn-contact"></button>
 
         <div class="jl-page-wrapper">
-
             <section class="jl-full-height jl-first-section" id="jl-home-presentation">
-
                 <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12 col-md-3 offset-md-2 jl-display-text">
-
                                 <h1 class="jl-title jl-text-green jl-title-big">Hello!</h1>
-
                                 <p class="jl-text-light">
                                     I'm <span class="jl-text-green">Kamylle Victoria,</span> a <span class="jl-text-green"> JavaScript web developer!</span>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quibusdam placeat aut illo recusandae modi, quis quas alias est? Ab, in vero dolore harum dolor facilis sunt alias ducimus ratione.
                                 </p>
                                 <button class="jl-btn jl-btn-large jl-btn-green jl-mar-top-15 ">Budgets!</button>
-
                             </div>
                         </div>
                 </div>
@@ -95,12 +129,9 @@
                         <img src="../images/arrow-down.svg" alt="scrow down-arrow">
                     </div>
                 </div>
-
             </section>
 
-            <section class="jl-full-height">
-                
-            </section>
+            <section class="jl-full-height"></section>
         </div>
     
 <script src="../js/main.js"></script>
