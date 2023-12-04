@@ -39,3 +39,16 @@ for (let i = 0; i < toggleModal.length; i++) {
         budgetModal.classList.toggle('jl-slideTopIn');
 	});
 }
+
+
+//waypoints
+var myScrollDown = document.querySelector('.jl-scroll-down');
+var waypoint = new Waypoint({
+    element: document.querySelector('.jl-scroll-down'),
+    handler: function() {
+      
+      myScrollDown.classList.toggle('jl-fade-out')
+    },
+    offset: '80%'
+
+})
