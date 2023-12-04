@@ -18,18 +18,19 @@
         </div>
     </div>
 
-    <div class="jl-overlay"></div>
-    <div class="jl-modal jl-bg-black">
+    <div class="jl-overlay jl-toggle-modal"></div>
+    <div class="jl-modal jl-bg-black" id="jl-budget-modal">
+        
         <div class="jl-modal-header">
             <h1 class="jl-title jl-text-green">
                 Do a budget!
             </h1>
-            <button class="jl-close-modal">
+            <button class="jl-close-modal jl-toggle-modal">
                 X
             </button>
         </div>
-        <div class="jl-modal-body">
-            
+
+        <div class="jl-modal-body"> 
             <div class="row">
                 <div class="col-sm-12">
                     <p class="jl-text-light">Please, fill in the details below and i'll get back to you as soon as possible! </p>
@@ -41,22 +42,22 @@
                     <form class="jl-form">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
-                                <label class="jl-text-light" for="name">Name:</label>
-                                <input type="text" name="name" id="jl-name" class="jl-field">
+                                <label class="jl-text-light" for="jl-name">Name:</label>
+                                <input type="text" name="jl-name" id="jl-name" class="jl-field">
                             </div>
                             <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
-                                <label class="jl-text-light"  for="email">Email:</label>
-                                <input type="email" name="email" id="jl-email" class="jl-field">
+                                <label class="jl-text-light"  for="jl-email">Email:</label>
+                                <input type="email" name="jl-email" id="jl-email" class="jl-field">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
-                                <label class="jl-text-light" for="number">Phone number:</label>
-                                <input type="tel" name="number" id="jl-name" class="jl-field">
+                                <label class="jl-text-light" for="jl-number">Phone number:</label>
+                                <input type="tel" name="number" id="jl-number" class="jl-field">
                             </div>
                             <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
-                                <label class="jl-text-light" for="site">Website:</label>
-                                <input type="text" name="site" id="jl-name" class="jl-field">
+                                <label class="jl-text-light" for="jl-website">Website:</label>
+                                <input type="text" name="site" id="jl-website" class="jl-field">
                             </div>
                         </div>
 
@@ -119,7 +120,7 @@
                                     I'm <span class="jl-text-green">Kamylle Victoria,</span> a <span class="jl-text-green"> JavaScript web developer!</span>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quibusdam placeat aut illo recusandae modi, quis quas alias est? Ab, in vero dolore harum dolor facilis sunt alias ducimus ratione.
                                 </p>
-                                <button class="jl-btn jl-btn-large jl-btn-green jl-mar-top-15 ">Budgets!</button>
+                                <button class="jl-btn jl-btn-large jl-btn-green jl-mar-top-15 jl-toggle-modal">Do a budget!</button>
                             </div>
                         </div>
                 </div>

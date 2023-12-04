@@ -1,5 +1,6 @@
 //variables
 var btnContact = document.querySelector('.jl-btn-contact');
+var toggleModal = document.querySelectorAll('.jl-toggle-modal');
 
 //page prelader
 window.addEventListener('load', function(){
@@ -24,3 +25,17 @@ btnContact.addEventListener('click', function(){
 });
 
 //this is used to access the element of the current scope
+
+
+//open and close buttons
+for (let i = 0; i < toggleModal.length; i++) {
+	toggleModal[i].addEventListener("click", function(){
+
+        var overlay = document.querySelector('.jl-overlay');
+        var budgetModal = document.querySelector('#jl-budget-modal');
+		
+        overlay.classList.toggle('jl-is-open');
+        budgetModal.classList.toggle('jl-is-open',);
+        budgetModal.classList.toggle('jl-slideTopIn');
+	});
+}

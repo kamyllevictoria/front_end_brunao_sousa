@@ -44,6 +44,12 @@ p, label{
     }
 }
 
+@keyframes slideTopIn{
+    to{
+        top: 15%;
+    }
+}
+
 
 @media screen and (min-width: 320px){
 
@@ -77,7 +83,7 @@ p, label{
     .jl-overlay{
         width: 100%;
         height: 100vh;
-        display: block;
+        display: none;
         position: fixed;
         z-index: 1000;
         top:0;
@@ -87,11 +93,11 @@ p, label{
 
     .jl-modal{
         width: 800px;
-        display: table;
+        display: none;
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
-        top: 15%;
+        top: -100%;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -518,13 +524,15 @@ p, label{
     display: block;
 }
 
+.jl-slideTopIn{
+    animation: slideTopIn 0.8s forwards cubic-bezier(0,1.47,1,0.58);
+}
+
 .jl-change-icon{
-    background-position-y: -45px; /*quando colocamos o back-position-y -45px, quando posicionamos o mouse pelo o efeito hover, a segunda parte do icone aparece, pq ela diminui 45px*/
+    background-position-y: -45px; 
 }
 
 .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
 }
-
-
 
