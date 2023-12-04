@@ -320,7 +320,7 @@ p, label{
     top: 25vh;
 }
 
-.jl-item-counter{
+.jl-nav-counter{
     width: 100%;
     height: 90px;
     display: block;
@@ -328,7 +328,7 @@ p, label{
     position: relative;
 }
 
-.jl-item-counter:before{
+.jl-nav-counter:before{
     content: '';
     display: block;
     width: 35px;
@@ -339,13 +339,14 @@ p, label{
     left: 0px;
 }
 
-.jl-item-counter span{
+.jl-nav-counter span{
     font-family: 'Open Sans', sans-serif;
     font-size: 120px;
     font-weight: 600;
     line-height: 90px;
 }
 
+/*navigator items*/
 .jl-item-navigator{
     width: 100%;
     display: table;
@@ -369,13 +370,44 @@ p, label{
     background-color: #2CCB69;
 }
 
-.jl-portifolio-next-prev{
+.jl-items-next-prev{
     width: 100%;
     height: 45px;
     background-color: #2f2f2f;
-    display: block;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     border-radius: 0 23px 23px 0;
+    cursor: pointer;
 }
+
+.jl-items-next-prev > div{
+    height: 32px;
+}
+
+.jl-items-counter{
+    font-family: 'Open Sans', sans-serif;
+    color: #4D4C4C;
+    line-height: 32px;
+}
+
+.jl-item-prev, .jl-item-next span{
+    width: 45px;
+    color: #2CCB69;
+    text-align: center;
+
+}
+
+.jl-items-counter span:nth-child(1){
+    color: #bcbcbc;
+}
+
+ion-icon{
+    height: 30px;
+    font-size: 32px;
+    color: #2CCB69;
+}
+
 
 
 @media screen and (min-width: 576px){
@@ -607,3 +639,12 @@ p, label{
     animation: fadeOut 2s forwards ease-out;
 }
 
+.jl-no-radius-left{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.jl-no-radius-right{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
