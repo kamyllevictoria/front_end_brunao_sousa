@@ -52,3 +52,4 @@ var waypoint = new Waypoint({
     offset: '80%'
 
 })
+
