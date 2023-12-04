@@ -315,7 +315,6 @@ p, label{
     width: 145px;
     height: 400px;
     display: table;
-    background-color: red;
     position: absolute;
     left: 0;
     top: 25vh;
@@ -325,31 +324,57 @@ p, label{
     width: 100%;
     height: 90px;
     display: block;
-    background: rgb(202, 154, 154);
     margin-bottom: 60px;
+    position: relative;
+}
+
+.jl-item-counter:before{
+    content: '';
+    display: block;
+    width: 35px;
+    height: 100%;
+    background-color: #1C1C1C;
+    position: absolute;
+    top: 3px;
+    left: 0px;
+}
+
+.jl-item-counter span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 90px;
 }
 
 .jl-item-navigator{
     width: 100%;
     display: table;
-    background-color: #2CCB69;
 }
 
 .jl-item-navigator a{
     width: 20px;
     height: 1px;
-    background-color: #712ccb;
     display: block;
-    margin-bottom: 80px;
+    margin: 0 0 80px 35px;
+    background-color: #4D4D4D;
+
 }
+
 .jl-item-navigator  a:last-child{
     margin-bottom: 30px;
 }
+
+.jl-item-navigator  a.jl-item-active{
+    width: 90px;
+    background-color: #2CCB69;
+}
+
 .jl-portifolio-next-prev{
     width: 100%;
     height: 45px;
-    background-color: blue;
+    background-color: #2f2f2f;
     display: block;
+    border-radius: 0 23px 23px 0;
 }
 
 
