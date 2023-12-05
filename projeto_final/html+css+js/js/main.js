@@ -50,6 +50,29 @@ var waypoint = new Waypoint({
       myScrollDown.classList.toggle('jl-fade-out')
     },
     offset: '80%'
+});
 
-})
 
+
+//portifolio slider
+
+
+
+//slider variables
+var sliderContainer = document.querySelector('.jl-slider-container');
+var sliderList = document.querySelector('.jl-slider-list');
+var sliderItem = document.querySelectorAll('.jl-slider-item');
+var containerWidth = sliderContainer.parentElement.offsetWidth;
+var sliderListWidth = null;
+
+
+sliderContainer.style.width = containerWidth+'px';
+
+for(let p = 0; p < sliderItem.length; p++){
+    sliderItem[p].style.width = containerWidth+'px';
+
+    var sliderItemWidth = sliderItem[p].offsetWidth;
+
+    sliderListWidth += sliderItemWidth;
+}
+sliderList.style.width = sliderListWidth+'px';

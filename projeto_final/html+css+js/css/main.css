@@ -410,40 +410,24 @@ ion-icon{
 
 /*slider*/
 .jl-slider-container{
-    width: 100%;
     background-color: white;
+    display: block;
+    overflow: hidden;
 }
 
 .jl-slider-list{
     width: auto;
     display: block;
     background-color: deeppink;
+    height: 700px;
     list-style: none;
 }
 
 .jl-slider-item{
-    display: inline-block;
-    width: 500px;
+    display: block;
     height: 500px;
+    float: left;
 }
-
-
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
-}
-.green{
-    background-color: green;
-}
-.yellow{
-    background-color: yellow;
-}
-.pink{
-    background-color: rgb(228, 96, 118);
-}
-
 
 
 @media screen and (min-width: 576px){
@@ -684,4 +668,18 @@ ion-icon{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: rgb(228, 96, 118);
+}
