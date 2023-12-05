@@ -408,6 +408,42 @@ ion-icon{
     color: #2CCB69;
 }
 
+/*slider*/
+.jl-slider-container{
+    width: 100%;
+    background-color: white;
+}
+
+.jl-slider-list{
+    width: auto;
+    display: block;
+    background-color: deeppink;
+    list-style: none;
+}
+
+.jl-slider-item{
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+}
+
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: rgb(228, 96, 118);
+}
+
 
 
 @media screen and (min-width: 576px){
@@ -648,3 +684,4 @@ ion-icon{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+
