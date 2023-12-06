@@ -1,7 +1,6 @@
 var sliderContainer = document.querySelector('.jl-slider-container');
 var sliderList = document.querySelector('.jl-slider-list');
 var sliderItem = document.querySelectorAll('.jl-slider-item');
-
 var sliderListWidth = null;
 var prevItem = document.querySelector('.jl-item-prev');
 var nextItem = document.querySelector('.jl-item-next');
@@ -9,6 +8,10 @@ var sliderPos = 0;
 const sliderTotalItems =  sliderItem.length;
 var currentSlide = document.querySelector(".jl-current-slide");
 var totalSlide = document.querySelector('.jl-total-slide');
+var currentCounter = 1;
+
+
+
 
 var containerWidth = sliderContainer.parentElement.offsetWidth;
 sliderContainer.style.width = containerWidth+'px';
@@ -39,6 +42,8 @@ var nextSlideAnime = function(){
           }); 
     };
 }
+
+
 //prev slide
 var prevSlideAnime = function(){
     if(sliderPos === 0){
@@ -52,6 +57,7 @@ var prevSlideAnime = function(){
     }
 }
 
+
 //counter formatter
 var counterFormatter = function(n){
     if(n <= 9){
@@ -61,15 +67,35 @@ var counterFormatter = function(n){
     }
 }
 
-//ACTIONS
+
+//counter add
+var counterAdd = function(){
+    if(currentCounter > 0 && currentCounter < sliderTotalItems){
+        currentCounter++;
+        currentSlide.innerHTML = counterFormatter(currentCounter);
+    }
+}
+
+
+//counter remove
+var removeAdd = function(){
+    if(currentCounter > 1 && currentCounter <= sliderTotalItems){
+        currentCounter--;
+        currentSlide.innerHTML = counterFormatter(currentCounter);
+    }
+}
+
+//actions
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 
 nextItem.addEventListener('click', function(){
     nextSlideAnime();
+    counterAdd();
 })
 
 prevItem.addEventListener('click', function(){
     prevSlideAnime();
+    removeAdd();
 })
 
 
