@@ -15,6 +15,8 @@ var currentCounter = 1;
 
 var navItems = document.querySelectorAll('.jl-item-navigator a');
 
+var navCounter = document.querySelector('.jl-nav-counter span');
+
 
 var containerWidth = sliderContainer.parentElement.offsetWidth;
 sliderContainer.style.width = containerWidth+'px';
@@ -71,6 +73,7 @@ var counterAdd = function(){
     if(currentCounter > 0 && currentCounter < sliderTotalItems){
         currentCounter++;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
@@ -79,6 +82,7 @@ var removeAdd = function(){
     if(currentCounter > 1 && currentCounter <= sliderTotalItems){
         currentCounter--;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
