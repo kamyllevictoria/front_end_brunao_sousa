@@ -102,19 +102,20 @@ var setActiveNav = function(){
         }
     }
 }
+
 //add slide class
 var setActiveSlide = function(){
     for(var sld = 0; sld < sliderItem.length; sld++){
         let mySlideNumber = parseInt(sliderItem[sld].getAttribute('data-slide')); 
         if(mySlideNumber === currentCounter){
-            sliderItem[sld].classList.add('jl-slide-active');    
+            sliderItem[sld].classList.add('jl-slide-active');
+            sliderItem[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right'); 
+            
         }
     }
 }
 
-
-
-//remove nav class
+//remove nav and slide class
 var changeActive = function(){
     for(var rm = 0; rm < navItems.length; rm++){
         navItems[rm].classList.remove('jl-item-active');
@@ -131,9 +132,13 @@ var changeActive = function(){
 }
 
 
+
+
+
+
+
 //actions 
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
-
 nextItem.addEventListener('click', function(){
     nextSlideAnime();
     counterAdd();
@@ -143,7 +148,6 @@ nextItem.addEventListener('click', function(){
 prevItem.addEventListener('click', function(){
     prevSlideAnime();
     removeAdd();
-    
 })
 
 

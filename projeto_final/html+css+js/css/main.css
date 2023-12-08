@@ -50,7 +50,7 @@ p, label{
     }
 }
 
-@keyframes scale-right{
+@keyframes scaleRight{
     to{
         transform: scaleX(1);
     }
@@ -442,10 +442,11 @@ ion-icon{
 }
 
 .jl-portfolio-item-thumb{
-    background-color: #2C2C2C;
     width: 100%;
+    background-color: #2C2C2C;
     display: table;
     padding: 75px 0;
+    position: relative;
 }
 
 .jl-portfolio-item-thumb img{
@@ -456,6 +457,17 @@ ion-icon{
     left: -75px;
 }
 
+.jl-portfolio-item-box{
+    width:100% ;
+    height: 100%;
+    display: block;
+    background-color: #2C2C2C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}
 
 
 
@@ -721,7 +733,7 @@ ion-icon{
     border-bottom-right-radius: 0;
 }
 .jl-scale-right{
-    animation: scale-right 0.7s 0.2s forwards cubicBezier(0,1.01,.32,1);
+    animation: scaleRight 0.7s 0.2s forwards cubicBezier(0,1.01,.32,1);
 }
 
 }
