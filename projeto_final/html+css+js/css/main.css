@@ -10,6 +10,12 @@ p, label{
     font-family: "Open Sans", sans-serif;
 }
 
+@keyframes slideTopIn{
+    to{
+        top: 15%;
+    }
+}
+
 @keyframes fadeOut{
     to{
         opacity: 0;
@@ -44,15 +50,29 @@ p, label{
     }
 }
 
-@keyframes slideTopIn{
-    to{
-        top: 15%;
-    }
-}
-
 @keyframes scaleRight{
     to{
         transform: scaleX(1);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0);
+        transform-origin: left;
+    }
+
+    100%{
+        transform: scale(1);
+        transform-origin: left;
+    }
+}
+
+
+@keyframes fadeFromLeft{
+    to{
+        left: 0;
+        opacity: 1;
     }
 }
 
@@ -436,9 +456,11 @@ ion-icon{
      
 }
 .jl-portfolio-item-info{
-    width: 100%;
+    width: calc(100% - 75px);
     display: table;
     margin-top: 60px;
+    position: relative;
+    animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .jl-portfolio-item-thumb{
@@ -455,6 +477,7 @@ ion-icon{
     height: auto;
     position: relative;
     left: -75px;
+    animation: scale 0.5s 0.2s forwards;
 }
 
 .jl-portfolio-item-box{
@@ -520,7 +543,7 @@ ion-icon{
         left: 0;
         bottom: -6px;
         transition: all 0.2s ease-out;
-        transform: scale(0,1);
+        transform: scale(0);
         transform-origin: center left; /*euxo y e x*/
     }
     
@@ -733,7 +756,17 @@ ion-icon{
     border-bottom-right-radius: 0;
 }
 .jl-scale-right{
-    animation: scaleRight 0.7s 0.2s forwards cubicBezier(0,1.01,.32,1);
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
+.jl-scale-up {
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
+.jl-scale{
+    animation: scale 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
+
+.jl-fade-from-left{
+    animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
 }

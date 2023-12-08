@@ -131,12 +131,6 @@ var changeActive = function(){
     setActiveSlide();
 }
 
-
-
-
-
-
-
 //actions 
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 nextItem.addEventListener('click', function(){
