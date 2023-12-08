@@ -50,6 +50,11 @@ p, label{
     }
 }
 
+@keyframes scale-right{
+    to{
+        transform: scaleX(1);
+    }
+}
 
 @media screen and (min-width: 320px){
 
@@ -314,7 +319,7 @@ p, label{
 
 /*portifolio home*/
 
-.jl-portifolio-navigator{
+.jl-portfolio-navigator{
     width: 145px;
     height: 400px;
     display: table;
@@ -430,11 +435,29 @@ ion-icon{
     margin-top: calc(26vh - 75px);
      
 }
-.jl-portifolio-item-info{
+.jl-portfolio-item-info{
     width: 100%;
     display: table;
     margin-top: 60px;
 }
+
+.jl-portfolio-item-thumb{
+    background-color: #2C2C2C;
+    width: 100%;
+    display: table;
+    padding: 75px 0;
+}
+
+.jl-portfolio-item-thumb img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: -75px;
+}
+
+
+
 
 @media screen and (min-width: 576px){
     
@@ -589,6 +612,7 @@ ion-icon{
 }
 
 .jl-title-large{
+    width: 90%;
     font-size: 64px;
     font-weight: 700;
 }
@@ -615,7 +639,7 @@ ion-icon{
 }
 .jl-bg-black{
     background-color: #000;
-}
+} 
 .jl-mar15{
     margin: 15px;
 }
@@ -630,7 +654,7 @@ ion-icon{
     margin-bottom: 30px;
 }
 
-.jl-mar-rigth-15{
+.jl-mar-right-15{
     margin-right: 15px;
 }
 .jl-mar-left-15{
@@ -675,7 +699,7 @@ ion-icon{
     display: block;
 }
 
-.jl-slideTopIn{
+.jl-slide-top-in{
     animation: slideTopIn 0.8s forwards cubic-bezier(0,1.47,1,0.58);
 }
 
@@ -695,6 +719,9 @@ ion-icon{
 .jl-no-radius-right{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+.jl-scale-right{
+    animation: scale-right 0.7s 0.2s forwards cubicBezier(0,1.01,.32,1);
 }
 
 }

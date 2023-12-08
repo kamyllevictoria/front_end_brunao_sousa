@@ -30,18 +30,20 @@ for(let p = 0; p < sliderItem.length; p++){
 }
 sliderList.style.width = sliderListWidth+'px';
 
+
 //HANDLERS
+
 //next slide
 var nextSlideAnime = function(){
     var lastItem = sliderListWidth - containerWidth;
-
     if((-1*(sliderPos) === lastItem)){
         return;
     } else{
         sliderPos -= containerWidth;
         anime({
             targets: sliderList,
-            translateX: sliderPos
+            translateX: sliderPos,
+            easing: 'cubicBezier(0,1.01,.32,1)'
           }); 
     };
 }
@@ -54,7 +56,8 @@ var prevSlideAnime = function(){
         sliderPos += containerWidth;
         anime({
             targets: sliderList,
-            translateX: sliderPos
+            translateX: sliderPos,
+            easing: 'cubicBezier(0,1.01,.32,1)'
         });
     }
 }
@@ -99,6 +102,18 @@ var setActiveNav = function(){
         }
     }
 }
+//add slide class
+var setActiveSlide = function(){
+    for(var sld = 0; sld < sliderItem.length; sld++){
+        let mySlideNumber = parseInt(sliderItem[sld].getAttribute('data-slide')); 
+        if(mySlideNumber === currentCounter){
+            sliderItem[sld].classList.add('jl-slide-active');    
+        }
+    }
+}
+
+
+
 //remove nav class
 var changeActive = function(){
     for(var rm = 0; rm < navItems.length; rm++){
@@ -108,23 +123,27 @@ var changeActive = function(){
             width: 20
         });
     }
+    for(var rms = 0; rms < sliderItem.length; rms++){
+        sliderItem[rms].classList.remove('jl-slide-active');
+    }
     setActiveNav(); 
-    //removes the class from previous items and adds it to the next item. we change the position of the functions, setActiveNav() remains inside the loop and changeActive() remains on click nextItem()
+    setActiveSlide();
 }
 
-//actions on arrow click
+
+//actions 
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 
 nextItem.addEventListener('click', function(){
     nextSlideAnime();
     counterAdd();
-    changeActive();
+    changeActive()
 })
 
 prevItem.addEventListener('click', function(){
     prevSlideAnime();
     removeAdd();
+    
 })
-
 
 
