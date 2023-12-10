@@ -110,7 +110,7 @@ var setActiveSlide = function(){
         if(mySlideNumber === currentCounter){
             sliderItem[sld].classList.add('jl-slide-active');
             sliderItem[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right'); 
-            
+
         }
     }
 }
@@ -136,12 +136,14 @@ totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 nextItem.addEventListener('click', function(){
     nextSlideAnime();
     counterAdd();
-    changeActive()
+    changeActive();
+    
 })
 
 prevItem.addEventListener('click', function(){
     prevSlideAnime();
     removeAdd();
+    changeActive();
 })
 
 

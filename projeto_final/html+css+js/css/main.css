@@ -122,7 +122,7 @@ p, label{
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
-        top: -100%;
+        
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -460,7 +460,7 @@ ion-icon{
     display: table;
     margin-top: 60px;
     position: relative;
-    animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
+
 }
 
 .jl-portfolio-item-thumb{
@@ -477,7 +477,6 @@ ion-icon{
     height: auto;
     position: relative;
     left: -75px;
-    animation: scale 0.5s 0.2s forwards;
 }
 
 .jl-portfolio-item-box{
@@ -735,7 +734,7 @@ ion-icon{
 }
 
 .jl-slide-top-in{
-    animation: slideTopIn 0.8s forwards cubic-bezier(0,1.47,1,0.58);
+    animation: slideTopIn 0.8s forwards cubic-bezier(.17,.67,.70,.67);
 }
 
 .jl-change-icon{
