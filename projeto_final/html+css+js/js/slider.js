@@ -1,7 +1,7 @@
 var sliderContainer = document.querySelector('.jl-slider-container');
 var sliderList = document.querySelector('.jl-slider-list');
 var sliderItem = document.querySelectorAll('.jl-slider-item');
-var sliderListWidth = null;
+var containerListWidth = null;
 
 var prevItem = document.querySelector('.jl-item-prev');
 var nextItem = document.querySelector('.jl-item-next');
@@ -18,28 +18,29 @@ var navItems = document.querySelectorAll('.jl-item-navigator a');
 var navCounter = document.querySelector('.jl-nav-counter span');
 
 
-var containerWidth = sliderContainer.parentElement.offsetWidth;
-sliderContainer.style.width = containerWidth+'px';
+var sliderWidth = sliderContainer.parentElement.offsetWidth;
+
+sliderContainer.style.width = sliderWidth+'px';
 
 for(let p = 0; p < sliderItem.length; p++){
-    sliderItem[p].style.width = containerWidth+'px';
+    sliderItem[p].style.width = sliderWidth+'px';
 
     var sliderItemWidth = sliderItem[p].offsetWidth;
 
-    sliderListWidth += sliderItemWidth;
+    containerListWidth += sliderItemWidth;
 }
-sliderList.style.width = sliderListWidth+'px';
+sliderList.style.width = containerListWidth+'px';
 
 
 //HANDLERS
 
 //next slide
 var nextSlideAnime = function(){
-    var lastItem = sliderListWidth - containerWidth;
+    var lastItem = containerListWidth - sliderWidth;
     if((-1*(sliderPos) === lastItem)){
         return;
     } else{
-        sliderPos -= containerWidth;
+        sliderPos -= sliderWidth;
         anime({
             targets: sliderList,
             translateX: sliderPos,
@@ -53,7 +54,7 @@ var prevSlideAnime = function(){
     if(sliderPos === 0){
         return;
     } else{
-        sliderPos += containerWidth;
+        sliderPos += sliderWidth;
         anime({
             targets: sliderList,
             translateX: sliderPos,
@@ -110,6 +111,7 @@ var setActiveSlide = function(){
         if(mySlideNumber === currentCounter){
             sliderItem[sld].classList.add('jl-slide-active');
             sliderItem[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right'); 
+            sliderItem[sld].querySelector('img').classList.add('jl-scale');
 
         }
     }
@@ -125,8 +127,11 @@ var changeActive = function(){
         });
     }
     for(var rms = 0; rms < sliderItem.length; rms++){
+        if(sliderItem[rms].classList.contains('jl-slide-active'));
         sliderItem[rms].classList.remove('jl-slide-active');
+        sliderItem[rms].querySelector('img').classList.remove('jl-scale');
     }
+
     setActiveNav(); 
     setActiveSlide();
 }
@@ -137,6 +142,7 @@ nextItem.addEventListener('click', function(){
     nextSlideAnime();
     counterAdd();
     changeActive();
+    setActiveSlide();
     
 })
 
@@ -144,6 +150,7 @@ prevItem.addEventListener('click', function(){
     prevSlideAnime();
     removeAdd();
     changeActive();
+    setActiveSlide();
 })
 
 

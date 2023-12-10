@@ -50,21 +50,11 @@ p, label{
     }
 }
 
-@keyframes scaleRight{
-    to{
-        transform: scaleX(1);
-    }
-}
 
 @keyframes scale{
-    0%{
-        transform: scale(0);
-        transform-origin: left;
-    }
-
     100%{
         transform: scale(1);
-        transform-origin: left;
+        transform-origin: center;
     }
 }
 
@@ -477,6 +467,7 @@ ion-icon{
     height: auto;
     position: relative;
     left: -75px;
+    transform: scale(0);
 }
 
 .jl-portfolio-item-box{
@@ -487,7 +478,7 @@ ion-icon{
     position: absolute;
     top: 0;
     left: 0;
-    transform: scaleX(0);
+    transform: scale(0);
     transform-origin: right;
 }
 
@@ -734,7 +725,7 @@ ion-icon{
 }
 
 .jl-slide-top-in{
-    animation: slideTopIn 0.8s forwards cubic-bezier(.17,.67,.70,.67);
+    animation: slideTopIn 0.8s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
 .jl-change-icon{
