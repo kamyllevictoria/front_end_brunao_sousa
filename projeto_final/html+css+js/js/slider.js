@@ -17,6 +17,7 @@ var navItems = document.querySelectorAll('.jl-item-navigator a');
 
 var navCounter = document.querySelector('.jl-nav-counter span');
 
+var totalItemInfo = document.querySelector('.jl-portfolio-item-info');
 
 var sliderWidth = sliderContainer.parentElement.offsetWidth;
 
@@ -112,7 +113,7 @@ var setActiveSlide = function(){
             sliderItem[sld].classList.add('jl-slide-active');
             sliderItem[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right'); 
             sliderItem[sld].querySelector('img').classList.add('jl-scale');
-
+            sliderItem[sld].querySelector('.jl-portfolio-item-info').classList.add('jl-fade-from-left')
         }
     }
 }
@@ -131,9 +132,14 @@ var changeActive = function(){
         sliderItem[rms].classList.remove('jl-slide-active');
         sliderItem[rms].querySelector('img').classList.remove('jl-scale');
     }
+    for(var rs = 0; rs < totalItemInfo.length; rs++){
+        if(totalItemInfo[rs].classList.contains('jl-fade-from-left'));
+        totalItemInfo[rs].classList.add('jl-fade-from-left');
+    }
 
     setActiveNav(); 
     setActiveSlide();
+
 }
 
 //actions 
@@ -142,8 +148,7 @@ nextItem.addEventListener('click', function(){
     nextSlideAnime();
     counterAdd();
     changeActive();
-    setActiveSlide();
-    
+    setActiveSlide(); 
 })
 
 prevItem.addEventListener('click', function(){
