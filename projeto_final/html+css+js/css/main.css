@@ -89,10 +89,12 @@ p, label{
         top:0;
         left: 0;
     }
+
     .jl-preloader-inner{
         margin-top: -45px;
         margin-right: -100px;
     }
+
     .jl-preloader-inner p{
         margin: 0 auto;
     }
@@ -157,6 +159,7 @@ p, label{
         font-size: 16px;
         padding-left: 15px ;
     }
+
     .jl-text-area{
         height: 120px;
     }
@@ -172,6 +175,7 @@ p, label{
         bottom: 10;
         z-index: 1000;
     }
+
     .jl-logo{
         width: 74px;
         height: 110px;
@@ -180,12 +184,14 @@ p, label{
         background-color: #2CCB69;
         border-radius: 0px 0px 37px 0px;
     }
+
     .jl-logo img{
         width: 46px;
         height: 31px;
         display: block;
         margin: 55px auto 0px auto;
     }
+
     .jl-menu{
         display: none;
         z-index: 500;
@@ -440,7 +446,7 @@ ion-icon{
     list-style: none;
 }
 
-.jl-slider-list .jl-portfolio-item{
+.jl-slider-list .jl-slider-item{
     display: block;
     height: 500px;
     float: left;
@@ -448,18 +454,25 @@ ion-icon{
      
 }
 
-.jl-portfolio-list{
-    list-style: none;
-     
+.jl-portfolio-item-thumb{
+    margin-bottom: 100px;
 }
 
-.jl-slider-list .jl-portfolio-item-info {
+.jl-portfolio-item-info{
+    margin-top: 75px;
+}
+.jl-slider-list .jl-portfolio-item-info{
     width: calc(100% - 75px);
     display: table;
-    margin-top: 60px;
+    margin-top: 75px;
     position: relative;
     opacity: 0;
     left: -75px;
+
+}
+
+.jl-portfolio-list{
+    list-style: none;
 }
 
 
@@ -468,7 +481,11 @@ ion-icon{
 }
 
 .jl-portfolio-list .jl-portfolio-item-info p {
-    width: 90%;
+    margin-right: 45px;
+}
+
+.jl-portfolio-item-info > button{
+    margin-right: 45px;
 }
 
 .jl-slider-list .jl-portfolio-item-thumb, .jl-portfolio-list .jl-portfolio-item-thumb{
@@ -481,8 +498,24 @@ ion-icon{
 
 .jl-slider-list .jl-portfolio-item-thumb > button, .jl-portfolio-list .jl-portfolio-item-thumb > button{
     margin-top: 16px;
-    float: right;
     margin-right: 75px;
+    float: right;
+}
+
+.jl-slider-list .jl-portfolio-item-box, .jl-portfolio-list .jl-portfolio-item-box{
+    width:100% ;
+    height: 100%;
+    display: block;
+    background-color: #2C2C2C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transform-origin: right;
+}
+
+.jl-portfolio-list .jl-portfolio-item-box{
+    transform: scale(1);
 }
 
 .jl-slider-list .jl-portfolio-item-thumb img{
@@ -500,29 +533,13 @@ ion-icon{
     transform: scale(1);
 }
 
-.jl-slider-list .jl-portfolio-item-box{
-    width:100% ;
-    height: 100%;
-    display: block;
-    background-color: #2C2C2C;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scale(0);
-    transform-origin: right;
-}
 
-.jl-portfolio-list .jl-portfolio-item-box{
-    transform: scale(1);
-}
+
+
 /*PORTFOLIO*/
 
-.jl-section-offset-top{
+.jl-section-offset-top {
     margin-top: 130px;
-}
-
-.jl-portfolio-list .jl-slider-item{
-    margin-bottom: 100px;
 }
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
@@ -530,12 +547,11 @@ ion-icon{
     margin-top: 70px;
 }
 
-
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
     float: right;
-    right: 60px;
-
 }
+
+
 
 @media screen and (min-width: 576px){
     
