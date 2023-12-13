@@ -2,22 +2,15 @@ var sliderContainer = document.querySelector('.jl-slider-container');
 var sliderList = document.querySelector('.jl-slider-list');
 var sliderItem = document.querySelectorAll('.jl-slider-item');
 var containerListWidth = null;
-
 var prevItem = document.querySelector('.jl-item-prev');
 var nextItem = document.querySelector('.jl-item-next');
 var sliderPos = 0;
-
 const sliderTotalItems =  sliderItem.length;
 var currentSlide = document.querySelector(".jl-current-slide");
 var totalSlide = document.querySelector('.jl-total-slide');
-
 var currentCounter = 1;
-
 var navItems = document.querySelectorAll('.jl-item-navigator a');
-
 var navCounter = document.querySelector('.jl-nav-counter span');
-
-var totalItemInfo = document.querySelector('.jl-portfolio-item-info');
 
 var sliderWidth = sliderContainer.parentElement.offsetWidth;
 
@@ -132,11 +125,6 @@ var changeActive = function(){
         sliderItem[rms].classList.remove('jl-slide-active');
         sliderItem[rms].querySelector('img').classList.remove('jl-scale');
     }
-    for(var rs = 0; rs < totalItemInfo.length; rs++){
-        if(totalItemInfo[rs].classList.contains('jl-fade-from-left'));
-        totalItemInfo[rs].classList.add('jl-fade-from-left');
-    }
-
     setActiveNav(); 
     setActiveSlide();
 
