@@ -494,7 +494,7 @@ ion-icon{
 }
 
 .jl-slider-list .jl-portfolio-item-box, .jl-portfolio-list .jl-portfolio-item-box{
-    width:100% ;
+    width: 100% ;
     height: 100%;
     display: block;
     background-color: #2C2C2C;
@@ -528,9 +528,14 @@ ion-icon{
     margin-bottom: 100px;
 }
 
+.jl-portfolio-item-info{
+    margin-top: 64px;
+}
+
 
 
 /*PORTFOLIO*/
+/*Odd divs*/
 
 .jl-section-offset-top {
     margin-top: 130px;
@@ -538,19 +543,46 @@ ion-icon{
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
     text-align: right;
-    margin-top: 65px;
 }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1{
-    margin-left: 64px;
+.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
+    margin-left: 65px;
+}
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1 {
+    margin-left: 65px;
 }
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
     float: right;
-
-
 }
 
+
+
+/*Even divs*/
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row{
+    flex-direction: row-reverse;
+}
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+    text-align: left;
+}
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+    margin-left: 75px;
+}
+
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
+    float: left;
+    margin-left: 150px;
+}
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
+    float: left;
+    left: 150px;
+
+}
 
 @media screen and (min-width: 576px){
     
