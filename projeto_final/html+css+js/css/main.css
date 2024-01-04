@@ -433,6 +433,8 @@ ion-icon{
     font-size: 32px;
 }
 
+
+
 /*slider*/
 .jl-slider-container{
     display: block;
@@ -454,36 +456,21 @@ ion-icon{
      
 }
 
-
-.jl-portfolio-item-thumb{
-    margin-bottom: 100px;
-}
-
-
-
-.jl-slider-list .jl-portfolio-item-info{
+.jl-slider-list  .jl-portfolio-item-info{
     width: calc(100% - 75px);
     display: table;
-    margin-top: 75px;
+    margin-top: 73px;
     position: relative;
     opacity: 0;
     left: -75px;
 }
 
+.jl-portfolio-list  .jl-portfolio-item-info{
+     width: calc(110% - 75px);
+}
+
 .jl-portfolio-list{
     list-style: none;
-}
-
-.jl-portfolio-list .jl-portfolio-item-info {
-    width: calc(100% - 75px);
-}
-
-.jl-portfolio-list .jl-portfolio-item-info p {
-    margin-right: 45px;
-}
-
-.jl-portfolio-item-info > button{
-    margin-right: 45px;
 }
 
 .jl-slider-list .jl-portfolio-item-thumb, .jl-portfolio-list .jl-portfolio-item-thumb{
@@ -494,9 +481,15 @@ ion-icon{
     position: relative;
 }
 
-.jl-slider-list .jl-portfolio-item-thumb > button, .jl-portfolio-list .jl-portfolio-item-thumb > button{
+.jl-slider-list .jl-portfolio-item-thumb > button{
     margin-top: 16px;
     margin-right: 75px;
+    float: right;
+}
+
+.jl-portfolio-list .jl-portfolio-item-thumb > button{
+    margin-top: 16px;
+    margin-right: 145px;
     float: right;
 }
 
@@ -531,6 +524,9 @@ ion-icon{
     transform: scale(1);
 }
 
+.jl-portfolio-list .jl-portfolio-item{
+    margin-bottom: 100px;
+}
 
 
 
@@ -545,9 +541,17 @@ ion-icon{
     margin-top: 65px;
 }
 
+.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1{
+    margin-left: 64px;
+}
+
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
     float: right;
+
+
 }
+
+
 @media screen and (min-width: 576px){
     
 }
