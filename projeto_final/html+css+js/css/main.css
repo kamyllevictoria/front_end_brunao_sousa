@@ -781,6 +781,12 @@ ion-icon{
     font-family: "Abril Fatface", serif;
     font-weight: normal;
 }
+
+.jl-subtitle{
+    font-family: 'Open Sans', serif;
+    font-weight: 800;
+}
+
 .jl-title-xlarge{
     font-size: 120px;
 }
