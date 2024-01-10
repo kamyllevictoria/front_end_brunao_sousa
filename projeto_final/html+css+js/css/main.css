@@ -226,14 +226,14 @@ p, label{
         display: none;
     }
 
-    .jl-contatc-info-inner{
+    .jl-contact-info-inner{
         display: table;
         width: 100%;
         float: right;
     }
 
     .jl-contact-info-inner p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 24px;
     }
 
@@ -250,7 +250,6 @@ p, label{
         width: 45px;
         height: 45px;
         display: inline-block;
-        
     }
 
     .jl-social > img{
@@ -764,6 +763,20 @@ ion-icon{
 
 /*utility classes*/
 
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.pink{
+    background-color: lightpink;
+}
+.green{
+    background-color: lightgreen;
+}
 .jl-title{
     font-family: "Abril Fatface", serif;
     font-weight: normal;
@@ -893,4 +906,5 @@ ion-icon{
 .jl-fade-from-left{
     animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
+
 }
