@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage it App - John Lemon Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    
+</head>
+<body>
+    <div class="jl-preloader">
+        <div class="jl-preloader-inner">
+            <img class="jl-mar-bottom-15" src="../../images/lemon-loader.svg" alt="">
+            <p class="jl-text-light jl-mar-top-15">Squeezing some lemons... hold on!</p>
+        </div>
+    </div>
+
+    <div class="jl-overlay jl-toggle-modal"></div>
+
+    <div class="jl-modal jl-bg-black jl-slide-top-in" id="jl-budget-modal">
+
+        <div class="jl-modal-header">
+            <h1 class="jl-title jl-text-green">
+                Do a budget!
+            </h1>
+            <button class="jl-close-modal jl-toggle-modal">
+                X
+            </button>
+        </div>
+
+        <div class="jl-modal-body"> 
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="jl-text-light">Please, fill in the details below and i'll get back to you as soon as possible! </p>
+                </div>
+            </div>
+
+            <div class="row jl-mar-top-15">
+                <div class="col-sm-12">
+
+                    <form class="jl-form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="jl-name">Name:</label>
+                                <input type="text" name="jl-name" id="jl-name" class="jl-field">
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light"  for="jl-email">Email:</label>
+                                <input type="email" name="jl-email" id="jl-email" class="jl-field">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="jl-number">Phone number:</label>
+                                <input type="tel" name="number" id="jl-number" class="jl-field">
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label class="jl-text-light" for="jl-website">Website:</label>
+                                <input type="text" name="site" id="jl-website" class="jl-field">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 jl-mar-top-15">
+                            <label class="jl-text-light" for="jl-msg">Describe the project you need my help: </label>
+                            <textarea class="jl-text-area" name="jl-msg" id="jl-msg" rows="8"></textarea>
+                        </div>
+
+                        <div class="row justify-content-end">
+                            <div class="col-sm-12 col-md-6 jl-mar-top-15">
+                                <button class="jl-btn jl-btn-large jl-btn-green jl-btn-block">Send</button>
+                            </div>
+                        </div>  
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <header class="jl-topbar">
+            <div class="jl-logo">
+                <img src="../../images/logo.svg" alt="logo lemon designer">
+            </div>
+            <nav class="jl-menu">
+                <a href="../../html/index.html">Home</a>
+                <a href="../../html/portfolio.html" >Projects</a>
+                <a href="../../html/aboutme.html">About me</a>
+            </nav>
+        </header>
+
+        <div class="jl-contact-info jl-text-light">
+            <div class="jl-contatc-info-inner">
+                <h2 class="jl-title jl-text-green">Contact</h2>
+                <p>kamylle.dev@gmail.com</p>
+                <p>+55 11 93062-7510</p>
+                <div class="jl-social-links">
+                    <a class="jl-social" href="#"> 
+                        <img src="../../images/icon-instagram.svg" alt="instagram logo">
+                    </a>
+                    <a class="jl-social" href="#">
+                        <img src="../../images/icon-twitter.svg" alt="twitter logo">
+                    </a>
+                    <a class="jl-social" href="#">
+                        <img src="../../images/icon-dribbble.svg" alt="dribble logo">
+                    </a>
+                </div>
+            </div>
+            <div class="jl-corner"></div>
+        </div>
+
+        <button class="jl-btn-contact"></button>
+
+        <div class="jl-page-wrapper">
+            <div class="container-fluid jl-hero">
+                <div class="container jl-bg-dark">
+                    <h1>Managet it!</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="../../js/main.js"></script> 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+    </body>    
+</html>
