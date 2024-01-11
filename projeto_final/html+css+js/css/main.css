@@ -689,6 +689,11 @@ ion-icon{
     padding: 45px 0;
 }
 
+.jl-img-process-2 {
+    position: relative;
+    left: 75px;
+}
+
 
 @media screen and (min-width: 576px){
     
