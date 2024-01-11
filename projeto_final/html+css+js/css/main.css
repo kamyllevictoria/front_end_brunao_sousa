@@ -651,8 +651,11 @@ ion-icon{
 }
 
 .jl-hero-inner-content h1{
-    font-size: 48px;
     margin-bottom: 50px;
+}
+
+.jl-hero-inner-content p{
+    margin-bottom: 15px;
 }
 
 .jl-hero-inner-content:before{
@@ -674,6 +677,16 @@ ion-icon{
     height: 100%;
     display: table;
     border-right: 1px solid #2CCB69;
+}
+
+.jl-post p{
+    margin-bottom: 30px;
+}
+
+.jl-post-section{
+    display: table;
+    width: 100%;
+    padding: 45px 0;
 }
 
 
@@ -838,16 +851,6 @@ ion-icon{
     background-color: red;
 }
 
-.blue{
-    background-color: blue;
-}
-
-.pink{
-    background-color: lightpink;
-}
-.green{
-    background-color: lightgreen;
-}
 .jl-title{
     font-family: "Abril Fatface", serif;
     font-weight: normal;
@@ -866,6 +869,10 @@ ion-icon{
     width: 90%;
     font-size: 64px;
     font-weight: 700;
+}
+
+.jl-title-medium{
+    font-size: 48px;
 }
 
 .jl-text-green{
@@ -925,18 +932,23 @@ ion-icon{
 .jl-pad30{
     padding: 30px;
 }
+
 .jl-pad-top-15{
     padding-top: 15px;
 }
+
 .jl-pad-bottom-15{
     padding-bottom: 15px;
 }
+
 .jl-pad-right-15{
     padding-right: 15px;
 }
+
 .jl-pad-left-15{
     padding-left: 15px;
 }
+
 .jl-full-height{
     height: 100vh;
     position: relative;
@@ -986,6 +998,10 @@ ion-icon{
     top: 7px;
     left: 0;
     background-color: #2CCB69;
+}
+
+.jl-text-center{
+    text-align: center;
 }
 
 /*behavior classes*/ 
