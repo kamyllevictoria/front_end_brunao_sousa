@@ -41,14 +41,23 @@ for (let i = 0; i < toggleModal.length; i++) {
 }
 
 
+
+//post gallery height
+var postGallery = document.querySelector('.jl-post-gallery');
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) +'px';
+
+
+
 //waypoints
 var myScrollDown = document.querySelector('.jl-scroll-down');
 var waypoint = new Waypoint({
-    element: document.querySelector('.jl-scroll-down'),
+    element: myScrollDown,
     handler: function() {
-      
-      myScrollDown.classList.toggle('jl-fade-out')
+        myScrollDown.classList.toggle('jl-fade-out')
     },
     offset: '80%'
 });
+
+
 

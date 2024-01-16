@@ -704,10 +704,15 @@ ion-icon{
     padding-bottom: 350px;
 }
 
+.jl-post-gallery{
+    display: block;
+}
+
 
 .jl-post-gallery .container{
     position: relative;
     top: -270px;
+
 }
 
 @media screen and (min-width: 576px){
