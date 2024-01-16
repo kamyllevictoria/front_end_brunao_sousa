@@ -241,14 +241,16 @@
             </section>
 
         </div>
-        <script src="/path/to/lib/jquery.waypoints.min.js"></script>
-        <script src="/path/to/shortcuts/inview.min.js"></script>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js"></script>
+
         <script src="../../js/main.js"></script> 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -256,19 +258,21 @@
             AOS.init();
             var rellax = new Rellax('.rellax');
 
-            var galleryItem = document.querySelectorAll('.jl-post-gallery img')
+            var galleryItem = document.querySelectorAll('.jl-post-gallery img');
             for (var i = 0; i < galleryItem.length; i++) {
-            new Waypoint({
-                element: galleryItem[i],
-                handler: function() {
-                    notify(this.element.innerHTML + ' hit')
-                }
-            })
-}
-        </script>
-        <script>
 
+                new Waypoint.Inview({
+                    element: galleryItem[i],
+                    entered: function () {
+                        var fullImage = this.element.getAttribute('data-src');
+                        this.element.setAttribute('src', fullImage);
+                    }
+                });
+            }
+
+         
         </script>
+
 
     </body>    
 </html>
