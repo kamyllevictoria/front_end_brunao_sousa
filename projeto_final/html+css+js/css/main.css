@@ -107,7 +107,8 @@ p, label{
         z-index: 1000;
         top:0;
         left: 0;
-        background-color: rgb(44, 201, 104, 0.95)
+        background-color: rgb(44, 201, 104, 0.95);
+        display: block;
     }
 
     .jl-modal{
@@ -713,6 +714,24 @@ ion-icon{
     position: relative;
     top: -270px;
 
+}
+
+
+.jl-gallery-frame-container{
+    width: 400px;
+    display: table;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1500;
+}
+
+img.jl-gallery-frame{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 @media screen and (min-width: 576px){
