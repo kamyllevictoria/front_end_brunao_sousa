@@ -19,6 +19,7 @@ const getImageSrc = function (){
 
 getImageSrc();
 
+//close overlay
 for(var c = 0; c < closeGallery.length; c++){
     closeGallery[c].addEventListener('click', function(){
         overlay.classList.remove('jl-is-open');
@@ -29,3 +30,9 @@ for(var c = 0; c < closeGallery.length; c++){
 
 
 
+//capture the current frame
+
+
+//capture the next frame = current + 1
+
+//we create the loop and capture the item that matches th number next to teh current item
