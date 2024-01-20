@@ -67,6 +67,16 @@ p, label{
     }
 }
 
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media screen and (min-width: 320px){
     
@@ -423,8 +433,9 @@ p, label{
     display: flex;
     justify-content:center;
     align-items: center;
-    border-radius: 0 23px 23px 0;
+    border-radius: 23px;
     cursor: pointer;
+    color: #2CCB69;
 }
 
 .jl-items-next-prev > div{
@@ -451,6 +462,7 @@ p, label{
 ion-icon{
     height: 30px;
     font-size: 32px;
+    
 }
 
 
@@ -742,6 +754,45 @@ img.jl-gallery-frame{
     display: block;
     position: relative;
 }
+
+.jl-close-gallery{
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    top: -15px;
+    right: -45px;
+    background-color: #000;
+    border-radius: 50%;
+    border: none;
+    z-index: 1200;
+}
+
+.jl-close-gallery:hover{
+    background-color: #4D4D4D;
+
+}
+
+.jl-close-gallery ion-icon{
+    color: #2CCB69;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 2px;
+    right: -1px;
+    cursor: pointer;
+}
+
+
+.jl-close-gallery ion-icon:hover{
+    color:white;
+}
+
+.jl-gallery-frame-container .jl-items-next-prev {
+    width: 150px;
+    margin: 75px auto;
+}
+
 
 
 .jl-gallery-frame-image{
@@ -1112,4 +1163,7 @@ img.jl-gallery-frame{
     animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
 
+.fade-up-animation {
+    animation: fade-up 0.5s ease-in-out; 
+}
 }
