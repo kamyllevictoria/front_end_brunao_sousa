@@ -78,6 +78,13 @@ p, label{
     }
 }
 
+
+@keyframes skeletonBlur{
+    to{
+        background-position: 250% -150px;
+    }
+}
+
 @media screen and (min-width: 320px){
     
     .jl-page-wrapper, .jl-preloader{
@@ -533,7 +540,7 @@ ion-icon{
     position: absolute;
     top: 0;
     left: 0;
-    transform: scaleX(0);
+    transform: scaleX(1);
     transform-origin: right;
 }
 
@@ -772,9 +779,13 @@ img.jl-gallery-frame{
 
 .jl-gallery-frame-inner .jl-skeleton-loading > div{
     width: 90%;
-    background-color: #bcbcbc;
+    background-color: #dadada;
     margin: 10% 0;
     border-radius: 8px;
+    background-image: url('../images/skeleton-loading-blur.svg');
+    background-repeat: no-repeat;
+    background-position: -150px -150px;
+    animation: skeletonBlur 3s infinite ease-out;
 }
 
 .jl-gallery-frame-inner .jl-skeleton-loading > div:first-child, .jl-gallery-frame-inner .jl-skeleton-loading > div:last-child{
