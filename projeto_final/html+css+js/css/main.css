@@ -216,6 +216,33 @@ p, label{
         z-index: 500;
     }
 
+    .jl-btn-menu-mobile{
+        width: 54px;
+        height: 54px;
+        display: block;
+        border-radius: 50%;
+        border: none;
+        background-color: #2CCB69;
+        color: black;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        z-index: 1600;
+        cursor: pointer;
+    }
+
+    .jl-btn-menu-mobile:hover{
+        color: #fff;
+        background-color: #2C2C2C;
+
+    }
+
+    .jl-btn-menu-mobile ion-icon{
+        vertical-align: middle;
+    }
+
+
+
     .jl-menu-mobile{
         width: 240px;
         height: 100vh;
@@ -225,7 +252,7 @@ p, label{
         right: 0;
         top: 0;
         z-index: 1500;
-        padding: 80px 30px 30px 30px;
+        padding: 100px 30px 30px 30px;
     }
 
     .jl-menu-mobile a{
