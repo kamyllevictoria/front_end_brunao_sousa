@@ -25,7 +25,7 @@ p, label{
 
 @keyframes slideTopIn{
     to{
-        top: 15%;
+        top: 20%;
         opacity: 1;
     }
 }
@@ -123,7 +123,7 @@ p, label{
         height: 100vh;
         display: none;
         position: fixed;
-        z-index: 1000;
+        z-index: 100;
         top:0;
         left: 0;
         background-color: rgb(44, 201, 104, 0.95);
@@ -139,14 +139,14 @@ p, label{
         left: 0;
         right: 0;
         margin: 0 auto;
-        z-index: 1200;
-        opacity: 0;
+        z-index: 5000;
     }
 
     .jl-modal-header, .jl-modal-body, .jl-form{
         width: 100%;
         display: table;
         position: relative;
+        z-index: 5001;
     }
 
     .jl-close-modal{
@@ -179,12 +179,16 @@ p, label{
         border: none;
         font-size: 16px;
         padding-left: 15px ;
+    
     }
 
     .jl-text-area{
         height: 120px;
     }
 
+    .jl-field {
+        height: 45px;
+    }
     .jl-topbar{
         width: 100%;
         height: 110px;
@@ -267,7 +271,7 @@ p, label{
         right: 0;
     }
 
-    .jl-menu-is-close{
+    .jl-menu-is-closed{
         right: -240px;
     }
 
@@ -631,7 +635,6 @@ ion-icon{
     position: relative;
     left: -75px;
     transform: scale(0);
-
 }
 
 .jl-portfolio-list .jl-portfolio-item-thumb img{
@@ -640,7 +643,7 @@ ion-icon{
     height: auto;
     position: relative;
     left: -75px;
-    
+
 }
 
 .jl-portfolio-list .jl-portfolio-item{
@@ -1242,9 +1245,11 @@ img.jl-gallery-frame{
     display: block;
 }
 
-.jl-slide-top-in{
-    animation: slideTopIn 0.6s forwards cubic-bezier(0,1.11,.6,.89);
+.jl-slide-top-in {
+    animation: slideTopIn 0.8s forwards cubic-bezier(0.42, 0, 0.58, 1);
 }
+
+
 
 .jl-change-icon{
     background-position-y: -45px; 

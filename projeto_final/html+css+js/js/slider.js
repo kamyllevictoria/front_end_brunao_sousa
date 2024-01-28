@@ -105,7 +105,7 @@ var setActiveSlide = function(){
         if(mySlideNumber === currentCounter){
             sliderItem[sld].classList.add('jl-slide-active');
             sliderItem[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right'); 
-            sliderItem[sld].querySelector('img').classList.add('jl-scale');
+            sliderItem[sld].querySelector('.jl-portfolio-item-thumb img').classList.add('jl-scale-up');
             sliderItem[sld].querySelector('.jl-portfolio-item-info').classList.add('jl-fade-from-left')
         }
     }
@@ -145,5 +145,3 @@ prevItem.addEventListener('click', function(){
     changeActive();
     setActiveSlide();
 })
-
-

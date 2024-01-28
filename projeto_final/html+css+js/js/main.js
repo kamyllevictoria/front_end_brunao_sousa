@@ -1,6 +1,11 @@
 //variables
 var btnContact = document.querySelector('.jl-btn-contact');
+var overlay = document.querySelector('.jl-overlay');
+var budgetModal = document.querySelector('#jl-budget-modal');
 var toggleModal = document.querySelectorAll('.jl-toggle-modal');
+var toggleMenu = document.querySelectorAll('.jl-toggle-menu');
+var mobileMenu = document.querySelector('.jl-menu-mobile');
+
 
 //page prelader
 window.addEventListener('load', function(){
@@ -24,23 +29,45 @@ btnContact.addEventListener('click', function(){
     //when I click on something, do it, when I click again, do it again - concept of toggle, that's why we don't use add, because it is cumulative in its actions
 });
 
-//this is used to access the element of the current scope
 
+//open and close mobile menu
+for(var m = 0; m <toggleMenu.length; m++){
+    toggleMenu[m].addEventListener('click', function(){
 
-//open and close buttons
+        var menuOverlay = document.querySelector('.jl-menu-overlay');
+        menuOverlay.classList.toggle('jl-is-open');
+        mobileMenu.classList.toggle('jl-menu-is-closed');
+        mobileMenu.classList.toggle('jl-menu-is-open')
+    })
+}
+
+//remove overlay
+overlay.addEventListener("click", function() {
+    if (budgetModal.classList.contains('jl-is-open')) {
+        budgetModal.classList.remove('jl-is-open');
+        overlay.classList.remove('jl-is-open');
+        budgetModal.classList.remove('jl-slide-top-in');
+    }
+    
+    budgetModal.classList.toggle('jl-is-open');
+    overlay.classList.toggle('jl-is-open');
+});
+
+//open and close modal form
 for (let i = 0; i < toggleModal.length; i++) {
-	toggleModal[i].addEventListener("click", function(){
+    toggleModal[i].addEventListener("click", function() {
 
-        var overlay = document.querySelector('.jl-overlay');
-        var budgetModal = document.querySelector('#jl-budget-modal');
-		
+        if (!budgetModal.classList.contains('jl-slide-top-in')) {
+            budgetModal.classList.add('jl-slide-top-in');
+        }
+        budgetModal.classList.toggle('jl-is-open');
         overlay.classList.toggle('jl-is-open');
-        budgetModal.classList.toggle('jl-is-open',);
-        budgetModal.classList.toggle('jl-slideTopIn');
-	});
+    });
 }
 
 
+
+//But, we have a problem, when loading our overlay, we are loading the toggle modal and toggle menu functions, therefore, a conflict between them will occur. When we click on the toggle (green area) it will not close, much less the menu.
 
 //post gallery height
 var postGallery = document.querySelector('.jl-post-gallery');
