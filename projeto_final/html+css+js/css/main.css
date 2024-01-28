@@ -10,17 +10,47 @@ p, label{
     font-family: "Open Sans", sans-serif;
 }
 
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
 
+@keyframes fadeFromLeft{
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
 
 @keyframes slideTopIn{
     to{
         top: 15%;
+        opacity: 1;
     }
 }
 
-@keyframes fadeOut{
-    to{
+@keyframes scaleRight {
+    to {
+        transform: scaleX(1)
+    }
+}
+
+@keyframes scaleUp{
+    to {
+        transform: scaleX(1);
+        transform-origin: center;
+    }
+}
+
+@keyframes fade-up {
+    from {
         opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -52,34 +82,6 @@ p, label{
     }
 }
 
-
-@keyframes scale{
-    100%{
-        transform: scale(1);
-        transform-origin: center;
-    }
-}
-
-
-@keyframes fadeFromLeft{
-    to{
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 @keyframes skeletonBlur{
     to{
         background-position: 250% -150px;
@@ -89,9 +91,8 @@ p, label{
 @media screen and (min-width: 320px){
     
     .jl-page-wrapper, .jl-preloader{
-        width: auto;
-        min-width: auto;
-        height: 100vh;
+        width: 100%;
+		height: 100vh;
         display: table;
         background-color: #1C1C1C;
         border: 30px solid #000;
@@ -111,14 +112,13 @@ p, label{
 
     .jl-preloader-inner{
         margin-top: -45px;
-        margin-right: -100px;
     }
 
     .jl-preloader-inner p{
         margin: 0 auto;
     }
 
-    .jl-overlay{
+    .jl-overlay, .jl-menu-overlay{
         width: 100%;
         height: 100vh;
         display: none;
@@ -135,11 +135,12 @@ p, label{
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
-        
+        top: -100;
         left: 0;
         right: 0;
         margin: 0 auto;
         z-index: 1200;
+        opacity: 0;
     }
 
     .jl-modal-header, .jl-modal-body, .jl-form{
@@ -166,6 +167,7 @@ p, label{
     .jl-form label{
         margin-bottom: 10px;
         font-size: 16px;
+        display: inline-block;
     }
 
     .jl-field, .jl-text-area{
@@ -191,7 +193,6 @@ p, label{
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 10;
         z-index: 1000;
     }
 
@@ -241,15 +242,12 @@ p, label{
         vertical-align: middle;
     }
 
-
-
     .jl-menu-mobile{
         width: 240px;
         height: 100vh;
         display: block;
         background-color: #000;
         position: fixed;
-        right: 0;
         top: 0;
         z-index: 1500;
         padding: 100px 30px 30px 30px;
@@ -263,7 +261,24 @@ p, label{
         color: #fff;
         font-family: 'Open Sans', sans-serif;
         text-decoration: none;
+    }
 
+    .jl-menu-is-open{
+        right: 0;
+    }
+
+    .jl-menu-is-close{
+        right: -240px;
+    }
+
+    .jl-menu-mob a {
+        width: 100%;
+        height: 60px;
+        display: block;
+        line-height: 60px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
     }
 
     .jl-btn-contact{
@@ -329,7 +344,9 @@ p, label{
         border-radius: 50%;
         color: #000;
         text-align: center;
+        transition: all 0.2s ease-out;
     }
+
     .jl-social-links-circle .jl-social:hover{
        background-color: #000;
     }
@@ -337,6 +354,7 @@ p, label{
     .jl-social-links-circle .jl-social ion-icon{
       vertical-align: middle;
       height: 45px;
+      
     }
 
     .jl-social-links-circle .jl-social ion-icon:hover{
@@ -349,6 +367,7 @@ p, label{
         width: 20px;
         margin: 13px auto 0;
     }
+
     .jl-corner{
         width: 25px;
         height: 25px;
@@ -367,18 +386,19 @@ p, label{
         background: transparent url('../images/corner.svg') no-repeat;
     }
 
-    /*Bootstrap*/
+
+    /*-------------------------------------------------------------------*/
+    /*HOME*/
     .jl-display-text{
         margin-top: 10%;
     }
+    
     #jl-home-presentation{
-        background-color: transparent;
+        position: relative;
+        top: 10px;
         background-image: url(../images/joao-lemon-designer-home.png);
         background-repeat: no-repeat;
         background-position: 50% bottom;
-        position: relative;
-        background-size: auto;
-        width: 100vw;
     }
 
     .jl-scroll-down{
@@ -403,7 +423,7 @@ p, label{
     }
     .jl-arrow-down img{
         width: 16px;
-        height: 10px;
+        height: 9px;
         display: block;
         position: absolute;
         bottom: 15px;
@@ -411,7 +431,7 @@ p, label{
         right: 0;
         margin: 0 auto;
         opacity: 0;;
-        animation: arrowDown 1s linear 1s infinite;
+        animation: arrowDown 1.5s linear 1.5s infinite;
     }
 
     .jl-arrow-down:before{
@@ -425,17 +445,19 @@ p, label{
         right: 0;
         margin: 0 auto;
         background-color: #000;
-        animation:  lineDown 1s infinite linear;
+        animation: lineDown 1.5s ease-out infinite;
+        transform-origin: top center
     }
 
-/*portifolio home*/
+/*--------------------------------------------------------------------*/
+/*portfolio home*/
 
 .jl-portfolio-navigator{
     width: 145px;
     height: 400px;
     display: table;
     position: absolute;
-    left: 0;
+    left: 15px;
     top: 25vh;
 }
 
@@ -527,8 +549,7 @@ ion-icon{
     
 }
 
-
-
+/*----------------------------------------------------------------------------------*/
 /*slider*/
 .jl-slider-container{
     display: block;
@@ -560,7 +581,7 @@ ion-icon{
 }
 
 .jl-portfolio-list  .jl-portfolio-item-info{
-     width: calc(110% - 75px);
+     width: calc(100% - 105px);
 }
 
 .jl-portfolio-list{
@@ -569,21 +590,14 @@ ion-icon{
 
 .jl-slider-list .jl-portfolio-item-thumb, .jl-portfolio-list .jl-portfolio-item-thumb{
     width: 100%;
-    background-color: #2C2C2C;
     display: table;
     padding: 75px 0 19px 0;
     position: relative;
 }
 
-.jl-slider-list .jl-portfolio-item-thumb > button{
-    margin-top: 16px;
+.jl-slider-list .jl-portfolio-item-thumb > button, .jl-portfolio-list .jl-portfolio-item-thumb > button {
+    margin-top: 17px;
     margin-right: 75px;
-    float: right;
-}
-
-.jl-portfolio-list .jl-portfolio-item-thumb > button{
-    margin-top: 16px;
-    margin-right: 145px;
     float: right;
 }
 
@@ -595,7 +609,7 @@ ion-icon{
     position: absolute;
     top: 0;
     left: 0;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: right;
 }
 
@@ -609,9 +623,6 @@ ion-icon{
     left: 0;
 }
 
-/*.jl-portfolio-list .jl-portfolio-item-box{
-    transform: scale(1);
-}*/
 
 .jl-slider-list .jl-portfolio-item-thumb img{
     width: 100%;
@@ -620,7 +631,7 @@ ion-icon{
     position: relative;
     left: -75px;
     transform: scale(0);
-    transform-origin: center;
+
 }
 
 .jl-portfolio-list .jl-portfolio-item-thumb img{
@@ -641,48 +652,32 @@ ion-icon{
 }
 
 
-
+/*----------------------------------------------------------*/
 /*PORTFOLIO*/
-/*Odd divs*/
-
 .jl-section-offset-top {
     margin-top: 130px;
 }
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
     text-align: right;
+    margin-top: 70px;
 }
 
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
-    margin-left: 55px;
-}
-
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1 {
-    margin-left: 55px;
+.jl-portfolio-list .jl-portfolio-item-info:nth-child(odd) > h1{
+    right: -45px;
 }
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
     float: right;
 }
-.jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-thumb button{
-    float: right;
-    margin-right: 75px;
+
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+    margin-left: 105px;
 }
 
-
-/*Even divs*/
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row{
+.jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
     flex-direction: row-reverse;
 }
-
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
-    text-align: left;
-}
-
-.jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
-    margin-left: 97px;
-}
-
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
     float: left;
@@ -690,10 +685,20 @@ ion-icon{
 }
 
 .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
-    float: left;
     left: 75px;
-
 }
+
+
+.jl-position-right{
+    position: relative;
+    right: 45px;
+}
+
+
+
+
+
+
 
 /*ABOUT ME*/
 #jl-about-img img{
@@ -703,7 +708,7 @@ ion-icon{
 
 /*DETAILS*/
 .jl-hero{
-    height: 550px;
+    height: 500px;
     background-image: url('../html/portfolio/img/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -711,13 +716,13 @@ ion-icon{
 }
 
 .jl-hero-inner{
-    height: 550px;
+    height: 500px;
     align-items: center;
 }
 
 .jl-hero-inner-content{
     position: relative;
-    margin-top: 15px;
+
 }
 
 .jl-hero-inner-content div{
@@ -872,12 +877,11 @@ img.jl-gallery-frame{
 
 .jl-close-gallery ion-icon{
     color: #2CCB69;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 2px;
-    right: -1px;
-    cursor: pointer;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
 }
 
 
@@ -912,6 +916,10 @@ img.jl-gallery-frame{
 
 @media screen and (min-width: 992px){
     .jl-menu-mobile{
+        display: none;
+    }
+
+    .jl-btn-menu-mobile{
         display: none;
     }
     
@@ -984,9 +992,11 @@ img.jl-gallery-frame{
     
 }
 
+
 @media screen and (min-width: 1600){
     
 }
+
 
 
 /*btn classes*/
@@ -1167,19 +1177,16 @@ img.jl-gallery-frame{
 }
 
 .jl-full-height{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-
-}
-
-.jl-first-section{
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 0;
+}
 
+.jl-first-section{
+    width: auto;
+    height: 100vh !important;
+    position: relative;
+    box-sizing: border-box;
 }
 
 
@@ -1227,13 +1234,16 @@ img.jl-gallery-frame{
     text-align: center;
 }
 
-/*behavior classes*/ 
+
+
+
+/*behavior classes, animation*/ 
 .jl-is-open{
     display: block;
 }
 
 .jl-slide-top-in{
-    animation: slideTopIn 0.8s forwards cubic-bezier(0, 1.01, 0.32, 1);
+    animation: slideTopIn 0.6s forwards cubic-bezier(0,1.11,.6,.89);
 }
 
 .jl-change-icon{
@@ -1244,6 +1254,18 @@ img.jl-gallery-frame{
     animation: fadeOut 2s forwards ease-out;
 }
 
+.jl-fade-from-left{
+    animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.jl-scale-right{
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.jl-scale-up {
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
+
 .jl-no-radius-left{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -1252,23 +1274,5 @@ img.jl-gallery-frame{
 .jl-no-radius-right{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-}
-.jl-scale-right{
-    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
-}
-
-.jl-scale-up {
-    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
-}
-.jl-scale{
-    animation: scale 0.5s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
-}
-
-.jl-fade-from-left{
-    animation: fadeFromLeft 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
-}
-
-.fade-up-animation {
-    animation: fade-up 0.8s ease-in-out; 
 }
 }
