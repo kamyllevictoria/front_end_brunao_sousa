@@ -5,7 +5,7 @@ var budgetModal = document.querySelector('#jl-budget-modal');
 var toggleModal = document.querySelectorAll('.jl-toggle-modal');
 var toggleMenu = document.querySelectorAll('.jl-toggle-menu');
 var mobileMenu = document.querySelector('.jl-menu-mobile');
-
+var btnMenuMobile = document.querySelector('.jl-btn-menu-mobile ion-icon')
 
 //page prelader
 window.addEventListener('load', function(){
@@ -29,7 +29,6 @@ btnContact.addEventListener('click', function(){
     //when I click on something, do it, when I click again, do it again - concept of toggle, that's why we don't use add, because it is cumulative in its actions
 });
 
-
 //open and close mobile menu
 for(var m = 0; m <toggleMenu.length; m++){
     toggleMenu[m].addEventListener('click', function(){
@@ -37,7 +36,16 @@ for(var m = 0; m <toggleMenu.length; m++){
         var menuOverlay = document.querySelector('.jl-menu-overlay');
         menuOverlay.classList.toggle('jl-is-open');
         mobileMenu.classList.toggle('jl-menu-is-closed');
-        mobileMenu.classList.toggle('jl-menu-is-open')
+        mobileMenu.classList.toggle('jl-menu-is-open');
+
+
+        var icon = btnMenuMobile.getAttribute('name')
+
+        if(icon === 'menu-outline'){
+            btnMenuMobile.setAttribute('name', 'close');
+        } else{
+            btnMenuMobile.setAttribute('name', 'menu-outline');
+        }
     })
 }
 
@@ -64,8 +72,6 @@ for (let i = 0; i < toggleModal.length; i++) {
         overlay.classList.toggle('jl-is-open');
     });
 }
-
-
 
 //But, we have a problem, when loading our overlay, we are loading the toggle modal and toggle menu functions, therefore, a conflict between them will occur. When we click on the toggle (green area) it will not close, much less the menu.
 
