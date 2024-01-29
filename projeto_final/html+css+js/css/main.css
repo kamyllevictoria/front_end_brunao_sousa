@@ -116,6 +116,8 @@ p, label{
 
     .jl-preloader-inner p{
         margin: 0 auto;
+        position: relative;
+        right: -30px;
     }
 
     .jl-overlay, .jl-menu-overlay{
@@ -414,6 +416,11 @@ p, label{
 
     .jl-home-presentation p{
         text-align: center;
+    }
+    
+    .jl-home-presentation .jl-btn{
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .jl-scroll-down{
@@ -915,6 +922,7 @@ p, label{
     .jl-title-xlarge{
         font-size: 90px;
     }
+
 }
     
     
@@ -923,8 +931,16 @@ p, label{
     
 }
 
+@media screen and (min-width: 700px){
+    .jl-home-presentation{
+        background-size: 100%;
+    }
+}
+
 @media screen and (min-width: 768px){
-    
+    .jl-home-presentation{
+        background-size: 80%;
+    }
 }
 
 @media screen and (min-width: 992px){
@@ -996,6 +1012,10 @@ p, label{
     }
     .jl-home-presentation p{
         text-align: left;
+    }
+    .jl-home-presentation .jl-btn{
+        margin-left: 0;
+        margin-right: auto;
     }
 
 
