@@ -412,7 +412,7 @@ p, label{
     .jl-home-presentation h1{
         margin-top: 20px;
         text-align: center;
-        width: 80%;
+        width: 105%;
     }
 
     .jl-home-presentation p{
@@ -575,6 +575,7 @@ p, label{
     .jl-slider-container{
         display: block;
         overflow: hidden;
+
     }
 
     .jl-slider-list{
@@ -588,14 +589,14 @@ p, label{
         display: block;
         height: 500px;
         float: left;
-        margin-top: calc(26vh - 75px);
+        margin-top: 0;
         
     }
 
     .jl-slider-list  .jl-portfolio-item-info{
         width: 100%;
         display: table;
-        margin-top: 73px;
+        margin-top: 15px;
         position: relative;
         opacity: 0;
     }
@@ -608,7 +609,14 @@ p, label{
         list-style: none;
     }
 
-    .jl-slider-list .jl-portfolio-item-thumb, .jl-portfolio-list .jl-portfolio-item-thumb{
+    .jl-slider-list .jl-portfolio-item-thumb{
+        width: 100%;
+        display: table;
+        padding: 15px 0 19px 0;
+        position: relative;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item-thumb{
         width: 100%;
         display: table;
         padding: 75px 0 19px 0;
@@ -1106,11 +1114,20 @@ p, label{
     .jl-slider-list  .jl-portfolio-item-info{
         width: calc(100% - 75px);
         left: -80px;
+        margin-top: 73px;
     }
 
     .jl-portfolio-item-info button{
         margin: 0;
     }
+
+    .jl-slider-list .jl-slider-item{
+        display: block;
+        height: 500px;
+        float: left;
+        margin-top: calc(26vh - 75px);
+    }
+
     
     
 }
@@ -1398,8 +1415,6 @@ p, label{
     animation: slideTopIn 0.8s forwards cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-
-
 .jl-change-icon{
     background-position-y: -45px; 
 }
@@ -1409,7 +1424,7 @@ p, label{
 }
 
 .jl-fade-from-left{
-    animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+    animation: fadeFromLeft 2s 0.8s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .jl-scale-right{
@@ -1428,5 +1443,4 @@ p, label{
 .jl-no-radius-right{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-}
 }

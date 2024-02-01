@@ -108,6 +108,7 @@ var setActiveSlide = function(){
             sliderItem[sld].querySelector('.jl-portfolio-item-thumb img').classList.add('jl-scale-up');
             sliderItem[sld].querySelector('.jl-portfolio-item-info').classList.add('jl-fade-from-left')
         }
+
     }
 }
 
