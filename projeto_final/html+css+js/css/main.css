@@ -688,45 +688,65 @@ p, label{
 
     /*----------------------------------------------------------*/
     /*PORTFOLIO*/
+    /*odd divs*/
     .jl-section-offset-top {
         margin-top: 130px;
     }
 
-    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
-        text-align: right;
-        margin-top: 70px;
+    .jl-portfolio-list .jl-portfolio-item .jl-portfolio-item-info{
+        position: relative;
+        top: 8px;
     }
 
-    .jl-portfolio-list .jl-portfolio-item-info:nth-child(odd) > h1{
-        right: -45px;
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
+        text-align: right;
+        margin-right: 75px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1{
+        margin-left: 110px;
     }
 
     .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
-        float: right;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+        float: left;
         margin-left: 105px;
     }
 
+
+    /*even divs*/
     .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
         flex-direction: row-reverse;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
-        float: left;
-        margin-left: 75px;
     }
 
     .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
         left: 75px;
     }
 
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+        text-align: left;
 
-    .jl-position-right{
-        position: relative;
-        right: 45px;
     }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info h1{
+        text-align: right;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info p{
+        text-align: right;
+
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info button{
+        float: right;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
+        position: relative;
+        float: left;
+        left: 50px;
+    }
+
+
 
     /*ABOUT ME*/
     #jl-about-img img{
