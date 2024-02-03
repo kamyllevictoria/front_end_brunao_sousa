@@ -11,6 +11,11 @@ var totalCounter = document.querySelector('.jl-total-slide');
 
 var skeletonLoading = document.querySelector('.jl-skeleton-loading');
 
+
+var postGallery = document.querySelector('.jl-post-gallery');
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) +'px';
+
 //counter formatter
 var counterFormatterItem = function(j){
     if(j < 10){
