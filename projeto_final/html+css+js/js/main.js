@@ -30,7 +30,7 @@ btnContact.addEventListener('click', function(){
 });
 
 //open and close mobile menu
-for(var m = 0; m <toggleMenu.length; m++){
+for(var m = 0; m < toggleMenu.length; m++){
     toggleMenu[m].addEventListener('click', function(){
 
         var menuOverlay = document.querySelector('.jl-menu-overlay');
@@ -46,6 +46,7 @@ for(var m = 0; m <toggleMenu.length; m++){
         } else{
             btnMenuMobile.setAttribute('name', 'menu-outline');
         }
+
     })
 }
 
@@ -76,6 +77,11 @@ for (let i = 0; i < toggleModal.length; i++) {
 //But, we have a problem, when loading our overlay, we are loading the toggle modal and toggle menu functions, therefore, a conflict between them will occur. When we click on the toggle (green area) it will not close, much less the menu.
 
 //post gallery height
+var postGallery = document.querySelector('.jl-post-gallery');
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) +'px';
+
+
 
 //waypoints
 var myScrollDown = document.querySelector('.jl-scroll-down');
