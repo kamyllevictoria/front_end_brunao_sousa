@@ -231,6 +231,11 @@ p, label{
         z-index: 500;
     }
 
+    .jl-menu-mobile a:hover{
+        color: #2CCB69;
+        text-decoration: underline;
+    }
+
     .jl-btn-menu-mobile{
         width: 54px;
         height: 54px;
@@ -708,57 +713,38 @@ p, label{
         margin-top: 130px;
     }
 
-    .jl-portfolio-list .jl-portfolio-item .jl-portfolio-item-info{
-        position: relative;
-        top: 8px;
-    }
-
     .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
         text-align: right;
-        margin-right: 75px;
+        margin-top: 70px;
     }
-
-    
 
     .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
-        float: left;
-        
+        float: right;
     }
 
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+        margin-left: 105px;
+    }
 
-    /*even divs*/
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info h1{
+        text-align: right;
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info p{
+        text-align: right;
+    }
+
     .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
         flex-direction: row-reverse;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
+        float: left;
+        margin-left: 75px;
     }
 
     .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
         left: 75px;
     }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
-        text-align: left;
-
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info h1{
-        text-align: right;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info p{
-        text-align: right;
-
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info button{
-        float: right;
-    }
-
-    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
-        position: relative;
-        float: left;
-        left: 50px;
-    }
-
 
 
     /*ABOUT ME*/
@@ -1008,6 +994,10 @@ p, label{
     }
 }
 
+@media screen and (min-width: 716px){
+    
+}
+
 @media screen and (min-width: 768px){
     .jl-home-presentation{
         background-size: 80%;
@@ -1049,7 +1039,7 @@ p, label{
 
 }
 
-@media screen and (min-width: 888px){
+@media screen and (max-width: 990px){
     .jl-portfolio-item-info p {
         text-align: center;
     }
