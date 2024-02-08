@@ -786,7 +786,6 @@ p, label{
         margin-bottom: 50px;
     }
 
-
     .jl-project-stats{
         width: 100%;
         height: 100%;
@@ -807,27 +806,19 @@ p, label{
         display: table;
         width: 100%;
         padding: 45px 0;
-    }
 
-    .jl-img-process-2 {
-        position: relative;
-        left: -2px;
     }
 
     .jl-pre-gallery{
         padding-bottom: 350px;
     }
 
-    .jl-post-gallery{
-        display: block;
-    }
-
-
     .jl-post-gallery .container{
-        position: relative;
-        top: -280px;
-
+        display: block;
+        height: 100%;
     }
+
+
 
     .jl-gallery-frame-container{
         width: 400px;
@@ -1475,6 +1466,12 @@ p, label{
 .jl-mar-left-15{
     margin-left: 15px;
 }
+
+.jl-img-thumb{
+    position: relative;
+    top: 150px;
+}
+
 .jl-pad15{
     padding: 15px;
 }
