@@ -706,10 +706,7 @@ p, label{
     /*----------------------------------------------------------*/
     /*PORTFOLIO*/
     /*odd divs*/
-    .jl-section-offset-top {
-        margin-top: 130px;
-    }
-
+   
     .jl-portfolio-list .jl-portfolio-item{
         margin-bottom: 50px;
     }
@@ -749,9 +746,23 @@ p, label{
 
     
     /*ABOUT ME*/
-    #jl-about-img img{
+    .jl-section-offset-top {
+        margin-top: 130px;
+    }
+    .jl-section-about-me{
+        height: calc(100% - 130px);
+    }
+
+    .jl-section-about-me .container-fluid, .jl-section-about-me .container-fluid > .row{
+        height: 100%;
+    }
+    .jl-avatar{
         position: relative;
+    }
+    .jl-box-img{
+        position: absolute;
         left: -15px;
+        bottom: 0;
     }
 
     /*DETAILS*/
