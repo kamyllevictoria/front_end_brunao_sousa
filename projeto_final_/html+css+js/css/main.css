@@ -338,7 +338,7 @@ p, label{
 
     .jl-contact-info-inner p {
         font-size: 17px;
-        line-height: 24px;
+        line-height: 20px;
     }
 
     .jl-social-links, .jl-social-links-circle{
@@ -749,6 +749,7 @@ p, label{
     .jl-section-offset-top {
         margin-top: 130px;
     }
+
     .jl-section-about-me{
         height: calc(100% - 130px);
     }
@@ -756,14 +757,24 @@ p, label{
     .jl-section-about-me .container-fluid, .jl-section-about-me .container-fluid > .row{
         height: 100%;
     }
+
     .jl-avatar{
         position: relative;
     }
+
     .jl-box-img{
         position: absolute;
         left: -15px;
         bottom: 0;
     }
+
+    .jl-tittle-info, .jl-about-info, .jl-awards-info{
+        width: 100%;
+        display: table;
+        float: left;
+        margin-bottom: 30px;
+    }
+
 
     /*DETAILS*/
     .jl-hero{
@@ -970,7 +981,7 @@ p, label{
 
     .jl-full-height{
         width: 100%;
-        height: auto;
+        height: 100vh;
         position: relative;
     }
     .jl-text-center-mob{
@@ -983,11 +994,43 @@ p, label{
         margin-top: -80px;
     }
 }
+@media screen and (max-width: 575px){
+    .jl-box-img img{
+        display: none;
+    }
+    .jl-tittle-info{
+        margin-bottom: 50px;
+    }
+    .jl-tittle-info, .jl-about-info, .jl-awards-info{
+        text-align: center;
+    }
+    .jl-top{
+        position: relative;
+        top: -75px;
+    }
+    .jl-social-links-circle{
+        margin-top: 15px;
+    }
+    .jl-awards-info{
+        margin-top: 15px;
+    }
+
+    .jl-awards-info .jl-page-list > li:nth-child(1)::before {
+        margin-left: 100px;
+    }
+
+    .jl-awards-info .jl-page-list > li:nth-child(2)::before {
+        margin-left: 165px;
+    }
+    .jl-awards-info .jl-page-list > li:nth-child(3)::before {
+        margin-left: 122px;
+    }
+
+}
 
 @media screen and (min-width: 576px){
     .jl-hero-inner-content{
         padding: 55px 65px 65px;
-
     }
 }
 
@@ -1045,6 +1088,9 @@ p, label{
 @media screen and (max-width: 990px){
     .jl-portfolio-item-info p {
         text-align: center;
+    }
+    .container-fluid{
+        height: auto;
     }
 }
 
@@ -1280,10 +1326,38 @@ p, label{
         border-right: 1px solid #2CCB69;
     }
 
+    .jl-tittle-info{
+        width: 100%;
+
+    }
+
+    .jl-about-info{
+        width: 55%;
+    } 
+
+    .jl-awards-info{
+        width: 45%;
+    }
+
 
 
     
     
+}
+
+@media screen and (max-width: 1230px){
+    .jl-tittle-info{
+        width: 100%;
+
+    }
+
+    .jl-about-info{
+        width: 100%;
+    } 
+
+    .jl-awards-info{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1200px){
