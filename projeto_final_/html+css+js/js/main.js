@@ -15,9 +15,7 @@ window.addEventListener('load', function(){
     setTimeout(function(){
         pagePreloader.style.display = 'none';
     }, 2000)
-    //we need to create a displey= none to disappear with our element and not let the opacity erase the other components of the screen, that's why we use the display settings within the setTimeOut function  
 
-    //the function setTimeOut is used when pageloader are ready, wait 3 seconds to load the principal page
 });
 
 //opening and closing contact information
@@ -26,7 +24,7 @@ btnContact.addEventListener('click', function(){
     
     boxContact.classList.toggle('jl-is-open');
     this.classList.toggle('jl-change-icon');
-    //when I click on something, do it, when I click again, do it again - concept of toggle, that's why we don't use add, because it is cumulative in its actions
+
 });
 
 //open and close mobile menu
@@ -38,29 +36,16 @@ for(var m = 0; m < toggleMenu.length; m++){
         mobileMenu.classList.toggle('jl-menu-is-closed');
         mobileMenu.classList.toggle('jl-menu-is-open');
 
-
         var icon = btnMenuMobile.getAttribute('name')
 
-        if(icon === 'menu-outline'){
+        if(icon === 'menu'){
             btnMenuMobile.setAttribute('name', 'close');
         } else{
-            btnMenuMobile.setAttribute('name', 'menu-outline');
+            btnMenuMobile.setAttribute('name', 'menu');
         }
 
     })
 }
-
-//remove overlay
-overlay.addEventListener("click", function() {
-    if (budgetModal.classList.contains('jl-is-open')) {
-        budgetModal.classList.remove('jl-is-open');
-        overlay.classList.remove('jl-is-open');
-        budgetModal.classList.remove('jl-slide-top-in');
-    }
-    
-    budgetModal.classList.toggle('jl-is-open');
-    overlay.classList.toggle('jl-is-open');
-});
 
 //open and close modal form
 for (let i = 0; i < toggleModal.length; i++) {
@@ -74,24 +59,6 @@ for (let i = 0; i < toggleModal.length; i++) {
     });
 }
 
-//But, we have a problem, when loading our overlay, we are loading the toggle modal and toggle menu functions, therefore, a conflict between them will occur. When we click on the toggle (green area) it will not close, much less the menu.
-
-//post gallery height
-var postGallery = document.querySelector('.jl-post-gallery');
-var postGalleryHeight = postGallery.clientHeight;
-postGallery.style.height = (postGalleryHeight - 270) +'px';
-
-
-
-//waypoints
-var myScrollDown = document.querySelector('.jl-scroll-down');
-var waypoint = new Waypoint({
-    element: myScrollDown,
-    handler: function() {
-        myScrollDown.classList.toggle('jl-fade-out')
-    },
-    offset: '80%'
-});
 
 
 
