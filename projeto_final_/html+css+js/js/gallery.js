@@ -1,7 +1,7 @@
 var overlay = document.querySelector('.jl-menu-overlay');
 var frameImage = document.querySelector('.jl-gallery-frame-image');
 var frameContainer = document.querySelector('.jl-gallery-frame-container');
-var galleryImages = document.querySelectorAll('.jl-thumb-img');
+var galleryImages = document.querySelectorAll('.jl-image-hover');
 var closeGallery = document.querySelectorAll('.jl-toggle-gallery');
 var btnPrev = document.querySelector('.jl-item-prev');
 var btnNext = document.querySelector('.jl-item-next');
@@ -22,21 +22,17 @@ var counterFormatterItem = function(j){
         else{
             return j;
         }
-
 }
 
 
 //skeleton loading
-
 const skeletonAnime = function (imagem) {
     var myImage = new Image();
     myImage.src = imagem;
     myImage.addEventListener('load', function () {
         skeletonLoading.classList.add('jl-fade-out');
-        console.log('iniciou fadeOut');
         setTimeout(function () {
             skeletonLoading.style.display = 'none';
-            console.log('iniciou display None');
         }, 2000);
     });
 }
@@ -46,8 +42,9 @@ totalCounter.innerHTML = counterFormatterItem(galleryImages.length);
 const getImageSrc = function (){
     for(var i = 0; i < galleryImages.length; i++){
         galleryImages[i].addEventListener('click', function(){
-            var imageSrc = this.getAttribute('data-src');
-            var itemNum = this.getAttribute('data-item');
+            var overlay = document.querySelector('.jl-menu-overlay');
+            var imageSrc = this.querySelector('img').getAttribute('data-src');
+            var itemNum = this.querySelector('img').getAttribute('data-item');
 
             skeletonLoading.style.display = 'flex';
 
@@ -68,12 +65,23 @@ getImageSrc();
 //close overlay
 for(var c = 0; c < closeGallery.length; c++){
     closeGallery[c].addEventListener('click', function(){
+        let overlay = document.querySelector('.jl-menu-overlay');
+        if(frameContainer.classList.contains('jl-is-open')){
+            frameContainer.classList.remove('jl-is-open');
+        }
         overlay.classList.remove('jl-is-open');
-        frameContainer.classList.remove('jl-is-open');
-    
+
     })
 }
 
+overlay.addEventListener('click', function(){
+    if(frameContainer.classList.contains('jl-is-open')){
+        frameContainer.classList.remove('jl-is-open')
+    }
+
+    overlay.classList.remove('jl-is-open')
+
+})
 
 const nextItem = function(){
     //current frame
