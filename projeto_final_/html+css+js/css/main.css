@@ -1572,11 +1572,72 @@ p, label{
     padding-left: 15px;
 }
 
-/*.jl-full-height{
-    width: 100%;
+.border-top-left{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.border-top-left::before{
+    display: block;
+    content: '';
+    width: 30px;
     height: 100vh;
-    position: relative;
-}*/
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+.border-top-left::after{
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 30px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+.border-bottom-right{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: #000;
+}
+
+.border-bottom-right::before{
+    display: block;
+    content: '';
+    width: 30px;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.border-bottom-right::after{
+    display: block;
+    content: '';
+    width: 100vw;
+    height: 30px;
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
 
 .jl-first-section{
     width: auto;
