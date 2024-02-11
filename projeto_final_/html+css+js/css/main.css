@@ -1691,8 +1691,32 @@ p, label{
     text-align: center;
 }
 
+.jl-image-hover{
+    display: table;
+    width: auto;
+    position: relative;
+}
 
+.jl-image-hover::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 700;
+    background-color: rgba(44, 203,105,0.85);
+    background-image: url(../html/portfolio/img/icon-see-more.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+.jl-image-hover:hover:before{
+    display: block;
+    cursor: pointer;
+
+}
 
 /*behavior classes, animation*/ 
 .jl-is-open{

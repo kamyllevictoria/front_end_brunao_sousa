@@ -1,14 +1,12 @@
-var overlay = document.querySelector('.jl-overlay');
+var overlay = document.querySelector('.jl-menu-overlay');
 var frameImage = document.querySelector('.jl-gallery-frame-image');
 var frameContainer = document.querySelector('.jl-gallery-frame-container');
 var galleryImages = document.querySelectorAll('.jl-thumb-img');
 var closeGallery = document.querySelectorAll('.jl-toggle-gallery');
 var btnPrev = document.querySelector('.jl-item-prev');
 var btnNext = document.querySelector('.jl-item-next');
-
 var currentCounter = document.querySelector('.jl-current-slide');
 var totalCounter = document.querySelector('.jl-total-slide');
-
 var skeletonLoading = document.querySelector('.jl-skeleton-loading');
 
 
@@ -30,16 +28,17 @@ var counterFormatterItem = function(j){
 
 //skeleton loading
 
-const skeletonAnime = function(imagem){
-    const myImage = new Image();
+const skeletonAnime = function (imagem) {
+    var myImage = new Image();
     myImage.src = imagem;
-    myImage.addEventListener('load', function(){
+    myImage.addEventListener('load', function () {
         skeletonLoading.classList.add('jl-fade-out');
-
-        setTimeout(function(){
+        console.log('iniciou fadeOut');
+        setTimeout(function () {
             skeletonLoading.style.display = 'none';
-        }, 2000)
-     })
+            console.log('iniciou display None');
+        }, 2000);
+    });
 }
 
 totalCounter.innerHTML = counterFormatterItem(galleryImages.length);
@@ -54,7 +53,7 @@ const getImageSrc = function (){
 
             frameImage.setAttribute('src', imageSrc);
             frameImage.setAttribute('data-index', itemNum);
-            overlay.classList.add('jl-is-open');
+            overlay.classList.add('jl-is-open')
             frameContainer.classList.add('jl-is-open');
             frameContainer.classList.add('fade-up-animation')
 
@@ -138,9 +137,6 @@ const prevItem = function(){
         
     }
 } 
-
-
-
 
 btnNext.addEventListener('click', function(){
     nextItem();
