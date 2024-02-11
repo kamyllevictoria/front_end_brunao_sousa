@@ -84,16 +84,12 @@ overlay.addEventListener('click', function(){
 })
 
 const nextItem = function(){
-    //current frame
     var currentItemNum = frameImage.getAttribute('data-index');
-    console.log(currentItemNum);
 
-    //capture the next frame
     var nexItemNum = parseInt(currentItemNum) + 1;
 
-    //we create the loop and capture the item that matches th number next to teh current item
     for(var n = 0; n < galleryImages.length; n++){
-        var item = galleryImages[n];
+        var item = galleryImages[n].querySelector('img');
         var itemNum = parseInt(item.getAttribute('data-item'));
 
         if(itemNum === nexItemNum){
