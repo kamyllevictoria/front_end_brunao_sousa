@@ -439,7 +439,7 @@ p, label{
 
     .jl-scroll-down{
         width: 70px;
-        height: 105px;
+        height: 135px;
         border-radius: 36px 36px 0 0;
         background-color: #2CCB69;
         display: block;
@@ -988,6 +988,20 @@ p, label{
     .jl-text-center-mob{
         text-align: center;
     }
+
+    
+    .jl-404 h1{
+       text-align: center;
+    }
+    .jl-404 p{
+        text-align: center;
+    }
+    .jl-404 .jl-btn{
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+     
+
 }
     
 @media screen and (min-width: 440px){
@@ -1311,6 +1325,17 @@ p, label{
     .jl-awards-info{
         width: 45%;
     }
+    .jl-404 h1, .jl-404 p{
+        text-align: left;
+    }
+
+    .jl-404 p{
+        margin-top: 45px;
+    }
+    .jl-404 .jl-btn{
+        margin-left: 0;
+        margin-top: 15px;
+    }
       
 }
 
@@ -1333,6 +1358,7 @@ p, label{
     .jl-awards-info .jl-page-list > li::before{
         display: none;
     }
+    
 
 }
 
@@ -1388,9 +1414,16 @@ p, label{
 
 
 
-@media screen and (min-width: 1364px){
-    
+@media screen and (max-width: 1350px){
+    .jl-text-error{
+        margin: 0 auto;
+    }
+    .jl-image-error{
+        margin: 0 auto;
+    }
 }
+
+
 
 
 @media screen and (min-width: 1600){
@@ -1467,6 +1500,8 @@ p, label{
     background-color: #2f2f2f;
     color: #fff;
 }
+
+
 
 
 
@@ -1658,6 +1693,7 @@ p, label{
     display: block;
 }
 
+
 .jl-box-img{
     width: 100%;
     display: table;
@@ -1757,7 +1793,18 @@ p, label{
     border-bottom-right-radius: 0;
 }
 
-.jl-text-none{
+.jl-text-none {
     text-decoration: none;
-    color: black;
+    color: #000;  
 }
+
+.jl-text-none-green{
+    text-decoration: none;
+    color: #2CCB69;
+}
+
+.jl-text-none-green:hover{
+    text-decoration: none;
+    color: white;
+}
+
