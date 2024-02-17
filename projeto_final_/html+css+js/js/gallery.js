@@ -119,7 +119,7 @@ const prevItem = function(){
 
     //we create the loop and capture the item that matches th number next to teh current item
     for(var p = 0; p < galleryImages.length; p++){
-        var item = galleryImages[p];
+        var item = galleryImages[p].querySelector('img');;
         var itemNum = parseInt(item.getAttribute('data-item'));
 
 
