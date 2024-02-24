@@ -1,3 +1,5 @@
+
+
 var overlay = document.querySelector('.jl-menu-overlay');
 var frameImage = document.querySelector('.jl-gallery-frame-image');
 var frameContainer = document.querySelector('.jl-gallery-frame-container');
@@ -149,5 +151,3 @@ btnNext.addEventListener('click', function(){
 btnPrev.addEventListener('click', function(){
     prevItem();
 })
-
-
