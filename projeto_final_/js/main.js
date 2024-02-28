@@ -39,9 +39,9 @@ for(var m = 0; m < toggleMenu.length; m++){
         var icon = btnMenuMobile.getAttribute('name')
 
         if(icon === 'menu'){
-            btnMenuMobile.setAttribute('name', 'close');
-        } else{
             btnMenuMobile.setAttribute('name', 'menu');
+        } else{
+            btnMenuMobile.setAttribute('name', 'close');
         }
 
     })
