@@ -989,18 +989,6 @@ p, label{
         text-align: center;
     }
 
-    
-    .jl-404 h1{
-       text-align: center;
-    }
-    .jl-404 p{
-        text-align: center;
-    }
-    .jl-404 .jl-btn{
-        margin: 0 auto;
-        margin-top: 15px;
-    }
-     
 
 }
     
@@ -1326,17 +1314,7 @@ p, label{
     .jl-awards-info{
         width: 45%;
     }
-    .jl-404 h1, .jl-404 p{
-        text-align: left;
-    }
 
-    .jl-404 p{
-        margin-top: 45px;
-    }
-    .jl-404 .jl-btn{
-        margin-left: 0;
-        margin-top: 15px;
-    }
       
 }
 
